@@ -6,15 +6,10 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/flights',
-    pathMatch: 'full',
-  },
-  {
-    path: '',
     component: ContentLayoutComponent,
     children: [
       {
-        path: 'flights',
+        path: '',
         loadChildren: () =>
           import('src\\app\\modules\\flights\\flights.module').then(
             (m) => m.FlightsModule
@@ -28,7 +23,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('src\\app\\modules\\auth\\auth.module').then((m) => m.AuthModule),
   },
-  { path: '**', redirectTo: '/auth/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({

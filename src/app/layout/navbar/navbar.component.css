@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap');
+
 .navbar {
   position: sticky;
-  top: 10px;
+  top: 0;
   width: 90%;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #1b0a34;
-  border-radius: 20px;
+  border-bottom: 1px solid #1b0a34;
   z-index: 1;
   margin: 0 auto;
 }
@@ -17,6 +18,9 @@
   color: #1b0a34;
   height: 100%;
   margin-left: 4%;
+  font-family: 'Catamaran', sans-serif;
+  letter-spacing: 10px;
+
 }
 
 .links {

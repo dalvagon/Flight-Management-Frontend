@@ -2,10 +2,12 @@
   <source src="../assets/landingbackground.mp4" type="video/mp4" />
 </video>
 
-<app-navbar></app-navbar>
+<div class="mat">
+  <app-navbar></app-navbar>
 
-<div class="content">
-  <router-outlet></router-outlet>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer></app-footer>
 </div>
-
-<app-footer></app-footer>

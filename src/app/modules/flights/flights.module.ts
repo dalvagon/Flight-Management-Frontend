@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { FlightsRoutingModule } from './flights-routing.module';
 import { FlightsComponent } from './page/flights/flights.component';
+import { LandingComponent } from './page/landing/landing.component';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
-  declarations: [FlightsComponent],
-  imports: [CommonModule],
+  declarations: [FlightsComponent, LandingComponent],
+  imports: [FlightsRoutingModule, ButtonModule],
 })
 export class FlightsModule {}

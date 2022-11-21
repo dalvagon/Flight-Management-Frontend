@@ -1,0 +1,125 @@
+.content {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.card {
+    font-size: 30px;
+    color: #CAC9EE;
+    background-color: #050423;
+    transition: ease-in-out 300ms;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.card:hover {
+    font-size: 25px;
+    cursor: pointer;
+    color: #00C6C3;
+}
+
+img {
+    max-width: 300px;
+    max-height: 200px;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+.booking-tab {
+    width: auto;
+    background-color: #CAC9EE;
+    height: auto;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p-inputgroup {
+    width: auto;
+    padding: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.p-inputgroup input {
+    min-width: 200px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.p-inputgroup-addon {
+    background-color: #00C6C3;
+}
+
+.pi {
+    color: #050423;
+}
+
+.button {
+    padding: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.p-button {
+    background-color: #00C6C3;
+    color: #050423;
+    outline: none;
+    border: none;
+}
+
+.p-button:hover,
+.p-button:enabled:focus {
+    background-color: #00C6C3;
+    color: #050423;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        margin-bottom: 50px;
+    }
+
+    .booking-tab {
+        flex-direction: column;
+    }
+
+    .p-inputgroup {
+        width: auto;
+        padding: 20px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .button {
+        padding: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

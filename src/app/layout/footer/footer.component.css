@@ -14,8 +14,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 50px;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .sides {
@@ -24,8 +25,8 @@
   flex-direction: row;
   align-items: center;
   margin-top: 40px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .left-side {
@@ -66,4 +67,11 @@
 .link:hover {
   cursor: pointer;
   color: #00C6C3;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .right-side {
+    width: 40%;
+  }
 }
