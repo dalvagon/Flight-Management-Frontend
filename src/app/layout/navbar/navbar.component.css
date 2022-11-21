@@ -1,0 +1,43 @@
+.navbar {
+  position: sticky;
+  top: 10px;
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #1b0a34;
+  border-radius: 20px;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 35px;
+  color: #1b0a34;
+  height: 100%;
+  margin-left: 4%;
+}
+
+.links {
+  width: max-content;
+  margin-right: 4%;
+}
+
+.link {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #1b0a34;
+  transition: ease-in-out 200ms;
+  text-decoration: none;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: #00C6C3;
+}
+
+p-avatar:hover {
+  cursor: pointer;
+}
