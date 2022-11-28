@@ -14,6 +14,7 @@ import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component'
 import { CoreModule } from './core/core.module';
 import { FlightsModule } from './modules/flights/flights.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AuthModule } from './modules/auth/auth.module';
     CoreModule,
     FlightsModule,
     AuthModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,13 +1,7 @@
-<video autoplay [muted]="'muted'" loop id="landingBackgroundVideo">
-  <source src="../assets/landingbackground.mp4" type="video/mp4" />
-</video>
-
-<div class="mat">
+<div class="container">
   <app-navbar></app-navbar>
 
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
+  <router-outlet></router-outlet>
 
   <app-footer></app-footer>
 </div>

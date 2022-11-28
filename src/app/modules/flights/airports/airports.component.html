@@ -1,0 +1,8 @@
+<div class="content">
+    <ng-container *ngFor="let airport of airports$ | async">
+        <div class="airport">
+            <p>{{airport.name}}</p>
+            <p>{{airport.address.number}}, {{airport.address.street}}, {{airport.address.city}}</p>
+        </div>
+    </ng-container>
+</div>

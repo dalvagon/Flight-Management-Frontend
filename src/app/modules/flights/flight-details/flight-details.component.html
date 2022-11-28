@@ -1,0 +1,22 @@
+<div class="content">
+    <p class="title">Flight Details:</p>
+    <div class="details">
+        <p>{{(flight$ | async)?.departureAirport?.city}} - {{(flight$ | async)?.destinationAirport?.city}}</p>
+        <p>Leaves {{(flight$ | async)?.departureDate | date: 'dd.MM.yyyy, HH:mm'}}</p>
+        <p>Arrives {{(flight$ | async)?.arrivalDate | date: 'dd.MM.yyyy, HH:mm'}}</p>
+        <p>Maximum weight per baggage: {{(flight$ | async)?.maxWeightPerBaggage}}</p>
+        <p>Maximum baggage weight per person: {{(flight$ | async)?.maxBaggageWeightPerPassenger}}</p>
+        <p>Maximum baggage dimensions: {{(flight$ | async)?.maxBaggageWidth}} - {{(flight$ | async)?.maxBaggageHeight}}
+            -
+            {{(flight$ | async)?.maxBaggageLength}}</p>
+        <p>Maximum weight per baggage: {{(flight$ | async)?.maxWeightPerBaggage}}</p>
+    </div>
+    <p class="title">Passengers:</p>
+    <div class="passengers">
+        <ng-container *ngFor="let passenger of (flight$ | async)?.passengers">
+            <div class="passenger">
+                {{passenger.person.name}} {{passenger.person.surname}}
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,1 +1,14 @@
-<p>flights works!</p>
+<div class="content">
+    <ng-container *ngFor="let flight of flights$ | async">
+        <div class="flight" [routerLink]="['/flights/', flight.id]">
+            <div class="cities">
+                {{flight.departureAirport.city}} - {{flight.destinationAirport.city}}
+            </div>
+            <div class="info">
+                <p>Leaves {{flight.departureDate | date: 'dd.MM.yyyy, HH:mm'}} -
+                    Arrives {{flight.arrivalDate | date: 'dd.MM.yyyy, HH:mm'}}</p>
+                <p>Seats left: {{flight.passengerCapacity - flight.passengers.length}}</p>
+            </div>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,43 @@
+.content {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-top: 40px;
+    color: #050423;
+    font-size: 30px;
+}
+
+.passengers {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #CAC9EE;
+}
+
+.passenger {
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+    background-color: #050423;
+}
+
+.details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #CAC9EE;
+    background-color: #050423;
+    padding: 30px;
+    margin-top: 20px;
+    font-size: 17px;
+    letter-spacing: 1px;
+}

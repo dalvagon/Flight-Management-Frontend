@@ -10,20 +10,9 @@
   font-weight: bolder;
 }
 
-#landingBackgroundVideo {
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.mat {
-  height: 100%;
-}
 
 .container {
   width: 100%;
   min-height: 100vh;
+  background: linear-gradient(to bottom right, #CAC9EE, #00C6C3);
 }
