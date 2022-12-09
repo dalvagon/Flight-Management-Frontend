@@ -1,0 +1,12 @@
+<p-dialog styleClass="create-airport-dialog" header="Create airport" [(visible)]="display" (onHide)="close()"
+    [resizable]="false" [draggable]="false" [modal]="true">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <label>Name</label>
+        <input type="text" formControlName="name" placeholder="Name">
+        <label>Address</label>
+        <input type="text" formControlName="addressId" placeholder="AddressId">
+        <label>City</label>
+        <input type="text" formControlName="city" placeholder="City">
+        <button type="submit" pButton label="Save"></button>
+    </form>
+</p-dialog>

@@ -1,5 +1,5 @@
 <div class="content">
-    <ng-container *ngFor="let flight of flights$ | async">
+    <ng-container *ngFor="let flight of flights">
         <div class="flight" [routerLink]="['/flights/', flight.id]">
             <div class="cities">
                 {{flight.departureAirport.city}} - {{flight.destinationAirport.city}}

@@ -1,0 +1,14 @@
+<div class="content">
+    <button type="button" (click)="showCreateAirportDialog()" pButton icon="pi pi-plus"
+        label="Create new airport"></button>
+    <ng-container *ngFor="let airport of airports">
+        <div class="airport">
+            <p>{{airport.name}}</p>
+            <p>{{airport.address.number}}, {{airport.address.street}}, {{airport.address.city}}</p>
+            <i class="pi pi-times-circle delete-icon" (click)="deleteAirport(airport.id)"></i>
+        </div>
+    </ng-container>
+
+    <app-create-airport [display]="displayCreateAirportDialog" (output)="onOutput($event)">
+    </app-create-airport>
+</div>

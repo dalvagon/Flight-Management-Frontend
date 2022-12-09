@@ -1,0 +1,63 @@
+.container {
+    min-height: 200px;
+    background-color: black;
+}
+
+.create-airport-dialog {
+    width: 500px;
+}
+
+.create-airport-dialog .p-dialog-header {
+    background-color: #CAC9EE !important;
+    color: #050423 !important;
+}
+
+.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close {
+    color: #050423 !important;
+}
+
+.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close:hover {
+    background-color: #050423 !important;
+    color: #CAC9EE !important;
+}
+
+.create-airport-dialog .p-dialog-content {
+    background-color: #CAC9EE !important;
+    color: #050423 !important;
+}
+
+
+.create-airport-dialog .p-dialog-content button {
+    background-color: #00C6C3;
+    outline: none;
+    border: none;
+    color: #050423;
+    margin-top: 40px;
+    width: 40%;
+}
+
+
+.create-airport-dialog .p-dialog-content button:hover {
+    background-color: #050423 !important;
+    color: #CAC9EE !important;
+}
+
+
+.create-airport-dialog .p-dialog-content form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.create-airport-dialog .p-dialog-content form input {
+    width: 100%;
+    border: 1px solid #050423;
+    background-color: #CAC9EE;
+    outline: none;
+    height: 40px;
+    font-size: 15px;
+    text-indent: 4px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}

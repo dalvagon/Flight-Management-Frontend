@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AirportsComponent } from './airports/airports.component';
-import { FlightDetailsComponent } from './flight-details/flight-details.component';
+import { AirportsComponent } from './page/airports/airports.component';
+import { FlightDetailsComponent } from './page/flight-details/flight-details.component';
 import { FlightsComponent } from './page/flights/flights.component';
 import { LandingComponent } from './page/landing/landing.component';
 

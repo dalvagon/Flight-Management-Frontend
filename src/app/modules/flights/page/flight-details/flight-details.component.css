@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .title {
@@ -27,6 +28,7 @@
     padding: 30px;
     margin-top: 20px;
     background-color: #050423;
+    font-size: 20px;
 }
 
 .details {

@@ -16,32 +16,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: skewY(1deg);
 }
 
-.flight:hover {
+button {
+    background-color: #00C6C3;
+    outline: none;
+    border: none;
+    color: #050423;
+    margin-top: 40px;
+}
+
+button:hover {
+    background-color: #050423 !important;
+    color: #CAC9EE !important;
+}
+
+
+.delete-icon {
+    font-size: 20px;
+    margin-top: 20px;
+    color: red;
+    transition: ease-in-out 200ms;
+}
+
+.delete-icon:hover {
     cursor: pointer;
+    transform: rotate(90deg);
 }
-
-.cities {
-    width: 30%;
-    padding: 30px;
-}
-
-.info {
-    background-color: #050423;
-    width: 80%;
-    padding: 30px;
-    color: #CAC9EE;
-    transition: all ease-in-out 200ms;
-    font-size: 17px;
-    letter-spacing: 1px;
-}
-
-.info:hover {
-    transform: rotate(1deg);
-}
-
 
 @media only screen and (max-width: 900px) {
     .flight {

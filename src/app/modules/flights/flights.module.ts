@@ -4,12 +4,27 @@ import { FlightsComponent } from './page/flights/flights.component';
 import { LandingComponent } from './page/landing/landing.component';
 import { ButtonModule } from 'primeng/button';
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-import { FlightDetailsComponent } from './flight-details/flight-details.component';
-import { AirportsComponent } from './airports/airports.component';
+import { FlightDetailsComponent } from './page/flight-details/flight-details.component';
+import { CreateAirportComponent } from './page/create-airport/create-airport.component';
+import { DialogModule } from 'primeng/dialog';
+import { AirportsComponent } from './page/airports/airports.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [FlightsComponent, LandingComponent, FlightDetailsComponent, AirportsComponent],
-  imports: [CommonModule, FlightsRoutingModule, ButtonModule, AsyncPipe],
+  declarations: [
+    FlightsComponent,
+    LandingComponent,
+    FlightDetailsComponent,
+    CreateAirportComponent,
+    AirportsComponent,
+  ],
+  imports: [
+    CommonModule,
+    FlightsRoutingModule,
+    ButtonModule,
+    AsyncPipe,
+    DialogModule,
+    ReactiveFormsModule,
+  ],
 })
 export class FlightsModule {}
