@@ -8,7 +8,8 @@ import { FlightDetailsComponent } from './page/flight-details/flight-details.com
 import { CreateAirportComponent } from './page/create-airport/create-airport.component';
 import { DialogModule } from 'primeng/dialog';
 import { AirportsComponent } from './page/airports/airports.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AsyncPipe,
     DialogModule,
     ReactiveFormsModule,
+    DropdownModule,
+    FormsModule,
   ],
 })
 export class FlightsModule {}

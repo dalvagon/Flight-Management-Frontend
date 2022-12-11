@@ -4,7 +4,7 @@
     <ng-container *ngFor="let airport of airports">
         <div class="airport">
             <p>{{airport.name}}</p>
-            <p>{{airport.address.number}}, {{airport.address.street}}, {{airport.address.city}}</p>
+            <p>{{airport.address.number}}, {{airport.address.street}}, {{airport.address.city.name}}</p>
             <i class="pi pi-times-circle delete-icon" (click)="deleteAirport(airport.id)"></i>
         </div>
     </ng-container>

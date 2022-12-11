@@ -1,7 +1,8 @@
 <div class="content">
     <p class="title">Flight Details:</p>
     <div class="details">
-        <p>{{flight?.departureAirport?.city}} - {{flight?.destinationAirport?.city}}</p>
+        <p>{{flight?.departureAirport?.address?.city?.name}} -
+            {{flight?.destinationAirport?.address?.city?.name}}</p>
         <p>Leaves {{flight?.departureDate | date: 'dd.MM.yyyy, HH:mm'}}</p>
         <p>Arrives {{flight?.arrivalDate | date: 'dd.MM.yyyy, HH:mm'}}</p>
         <p>Maximum weight per baggage: {{flight?.maxWeightPerBaggage}}</p>

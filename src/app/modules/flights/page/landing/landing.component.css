@@ -50,57 +50,86 @@ img {
 }
 
 .booking-tab {
-    width: auto;
-    background-color: #CAC9EE;
+    background-color: #050423;
+    padding: 50px;
     height: auto;
     margin: 50px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #CAC9EE;
+}
+
+.booking-tab p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.booking-tab i {
+    padding: 10px;
+    font-size: 40px;
+    margin: auto;
+    color: #CAC9EE;
+}
+
+.booking-subtab {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
 
-.p-inputgroup {
-    width: auto;
-    padding: 50px;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.p-inputgroup input {
-    min-width: 200px;
-    border: none;
+.region-dropdown.p-dropdown,
+.region-dropdown.p-dropdown-open,
+.region-dropdown.p-dropdown:hover,
+.region-dropdown.p-dropdown-open:hover {
+    width: 400px;
+    background-color: #CAC9EE;
     outline: none;
-    padding: 10px;
+    box-shadow: none;
+    border: 1px solid #050423;
 }
 
-.p-inputgroup-addon {
-    background-color: #00C6C3;
+.region-dropdown.p-dropdown .p-dropdown-items-wrapper {
+    background-color: #CAC9EE;
+}
+
+.region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .fi {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
 }
 
 .pi {
-    color: #050423;
+    color: #00C6C3;
 }
 
-.button {
-    padding: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.p-button {
-    background-color: #00C6C3;
-    color: #050423;
+.p-button,
+.p-button:hover {
+    background-color: #00C6C3 !important;
+    color: #050423 !important;
     outline: none;
     border: none;
-}
-
-.p-button:hover,
-.p-button:enabled:focus {
-    background-color: #00C6C3;
-    color: #050423;
-    outline: none;
-    border: none;
+    width: auto;
+    margin: auto;
+    margin-top: 20px;
     box-shadow: none;
+}
+
+.p-button .pi {
+    color: #050423;
 }
 
 @media only screen and (max-width: 900px) {
@@ -117,13 +146,6 @@ img {
 
     .booking-tab {
         flex-direction: column;
-    }
-
-    .p-inputgroup {
-        width: auto;
-        padding: 20px;
-        padding-left: 60px;
-        padding-right: 60px;
     }
 
     .button {

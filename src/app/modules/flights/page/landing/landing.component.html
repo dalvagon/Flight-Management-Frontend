@@ -5,17 +5,76 @@
 
 <div class="content">
     <div class="booking-tab">
-        <div class="p-inputgroup">
-            <span class="p-inputgroup-addon"><i class="pi pi-map-marker"></i></span>
-            <input type="text" pInputText placeholder="Departure">
+        <p>Select where you're booking from:</p>
+        <div class="booking-subtab">
+            <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedDepartureCountry"
+                optionLabel="name" placeholder="Select departure country"
+                (onChange)="onDepartureCountrySelected($event)">
+                <ng-template let-country pTemplate="selectedItem">
+                    <div class="country-item">
+                        <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                        {{country.name}}
+                    </div>
+                </ng-template>
+                <ng-template let-country pTemplate="item">
+                    <div class="country-item">
+                        <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                        {{country.name}}
+                    </div>
+                </ng-template>
+            </p-dropdown>
+
+            <p-dropdown styleClass="region-dropdown" [options]="departureCities" [(ngModel)]="selectedDepartureCity"
+                optionLabel="name" placeholder="Select departure city" (onChange)="onDepartureCitySelected($event)">
+                <ng-template let-city pTemplate="selectedItem">
+                    <div class="city-item">
+                        {{city.name}}
+                    </div>
+                </ng-template>
+                <ng-template let-city pTemplate="item">
+                    <div class="country-item">
+                        {{city.name}}
+                    </div>
+                </ng-template>
+            </p-dropdown>
         </div>
-        <div class="p-inputgroup">
-            <span class="p-inputgroup-addon"><i class="pi pi-map-marker"></i></span>
-            <input type="text" pInputText placeholder="Arrival">
-        </div>
-        <div class="button">
-            <button pButton type="button" label="Search Flights" icon="pi pi-search"></button>
-        </div>
+        <ng-container *ngIf="departureCitySelected">
+            <i class="pi pi-angle-double-down"></i>
+            <p>Select where you want to go:</p>
+            <div class="booking-subtab">
+                <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedArrivalCountry"
+                    optionLabel="name" placeholder="Select arrival country"
+                    (onChange)="onArrivalCountrySelected($event)">
+                    <ng-template let-country pTemplate="selectedItem">
+                        <div class="country-item">
+                            <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                            {{country.name}}
+                        </div>
+                    </ng-template>
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                            {{country.name}}
+                        </div>
+                    </ng-template>
+                </p-dropdown>
+
+                <p-dropdown styleClass="region-dropdown" [options]="arrivalCities" [(ngModel)]="selectedArrivalCity"
+                    optionLabel="name" placeholder="Select arrival city">
+                    <ng-template let-city pTemplate="selectedItem">
+                        <div class="city-item">
+                            {{city.name}}
+                        </div>
+                    </ng-template>
+                    <ng-template let-city pTemplate="item">
+                        <div class="country-item">
+                            {{city.name}}
+                        </div>
+                    </ng-template>
+                </p-dropdown>
+            </div>
+            <button type="button" (click)="submit()" pButton icon="pi pi-search" label="Search for flights"></button>
+        </ng-container>
     </div>
     <div class="cards">
         <div class="card">

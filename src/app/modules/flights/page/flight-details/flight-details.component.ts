@@ -12,10 +12,6 @@ import { FlightService } from 'src/app/data/service/flight.service';
 export class FlightDetailsComponent implements OnInit {
   flight?: Flight;
 
-  // flight$: Observable<Flight> = this.flightService.getFlight(
-  //   this.route.snapshot.params['id']
-  // );
-
   constructor(
     private flightService: FlightService,
     private route: ActivatedRoute
