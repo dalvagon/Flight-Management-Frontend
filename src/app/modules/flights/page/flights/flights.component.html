@@ -1,4 +1,7 @@
 <div class="content">
+    <div [hidden]="departureCity && destinationCity" class="exception">
+        Search for flights <a [routerLink]="['/']">here</a>
+    </div>
     <ng-container *ngFor="let flight of flights">
         <div class="flight" [routerLink]="['/flights/', flight.id]">
             <div class="cities">
@@ -12,4 +15,9 @@
             </div>
         </div>
     </ng-container>
+    <div [hidden]="flights.length > 0 || !departureCity || !destinationCity" class="exception">
+        We are sorry. There are currently no
+        flights
+        from <i>{{departureCity}}</i> to <i>{{destinationCity}}</i>
+    </div>
 </div>

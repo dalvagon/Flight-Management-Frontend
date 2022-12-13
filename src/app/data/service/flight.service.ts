@@ -12,8 +12,16 @@ export class FlightService {
 
   constructor(private _httpClient: HttpClient) {}
 
-  getFlights(): Observable<Flight[]> {
-    return this._httpClient.get<Flight[]>(this.API_URL + '/flights');
+  getFlights(
+    departureCity: string,
+    deestinationCity: string
+  ): Observable<Flight[]> {
+    return this._httpClient.get<Flight[]>(this.API_URL + '/flights', {
+      params: {
+        departureCity: departureCity,
+        destinationCity: deestinationCity,
+      },
+    });
   }
 
   getFlight(id: string): Observable<Flight> {

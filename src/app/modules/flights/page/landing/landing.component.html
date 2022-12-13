@@ -5,7 +5,7 @@
 
 <div class="content">
     <div class="booking-tab">
-        <p>Select where you're booking from:</p>
+        <p>From:</p>
         <div class="booking-subtab">
             <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedDepartureCountry"
                 optionLabel="name" placeholder="Select departure country"
@@ -40,9 +40,9 @@
         </div>
         <ng-container *ngIf="departureCitySelected">
             <i class="pi pi-angle-double-down"></i>
-            <p>Select where you want to go:</p>
+            <p>To:</p>
             <div class="booking-subtab">
-                <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedArrivalCountry"
+                <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedDestinationCountry"
                     optionLabel="name" placeholder="Select arrival country"
                     (onChange)="onArrivalCountrySelected($event)">
                     <ng-template let-country pTemplate="selectedItem">
@@ -59,7 +59,7 @@
                     </ng-template>
                 </p-dropdown>
 
-                <p-dropdown styleClass="region-dropdown" [options]="arrivalCities" [(ngModel)]="selectedArrivalCity"
+                <p-dropdown styleClass="region-dropdown" [options]="arrivalCities" [(ngModel)]="selectedDestinationCity"
                     optionLabel="name" placeholder="Select arrival city">
                     <ng-template let-city pTemplate="selectedItem">
                         <div class="city-item">
@@ -73,8 +73,9 @@
                     </ng-template>
                 </p-dropdown>
             </div>
-            <button type="button" (click)="submit()" pButton icon="pi pi-search" label="Search for flights"></button>
         </ng-container>
+
+        <button type="button" (click)="submit()" pButton icon="pi pi-search" label="Search for flights"></button>
     </div>
     <div class="cards">
         <div class="card">

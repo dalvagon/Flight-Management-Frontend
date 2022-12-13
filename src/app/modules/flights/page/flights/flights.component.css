@@ -40,6 +40,10 @@
     transform: rotate(1deg);
 }
 
+.exception {
+    margin: auto;
+}
+
 
 @media only screen and (max-width: 900px) {
     .flight {

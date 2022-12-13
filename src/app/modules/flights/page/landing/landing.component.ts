@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { first } from 'rxjs';
 import { City } from 'src/app/data/schema/city';
 import { Country } from 'src/app/data/schema/country';
@@ -17,8 +18,8 @@ export class LandingComponent implements OnInit {
   arrivalCities: City[] = [];
   selectedDepartureCountry?: Country;
   selectedDepartureCity?: City;
-  selectedArrivalCountry?: Country;
-  selectedArrivalCity?: City;
+  selectedDestinationCountry?: Country;
+  selectedDestinationCity?: City;
   departureCitySelected: boolean = false;
 
   form = this.fb.group({
@@ -26,7 +27,11 @@ export class LandingComponent implements OnInit {
     city: ['', [Validators.required]],
   });
 
-  constructor(private regionsService: RegionService, private fb: FormBuilder) {}
+  constructor(
+    private regionsService: RegionService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.regionsService
@@ -73,7 +78,16 @@ export class LandingComponent implements OnInit {
 
   submit() {
     console.log(
-      this.selectedDepartureCity?.name + ' ' + this.selectedArrivalCity?.name
+      this.selectedDepartureCity?.name +
+        ' ' +
+        this.selectedDestinationCity?.name
     );
+
+    this.router.navigate(['/flights'], {
+      queryParams: {
+        departureCity: this.selectedDepartureCity?.name,
+        destinationCity: this.selectedDestinationCity?.name,
+      },
+    });
   }
 }

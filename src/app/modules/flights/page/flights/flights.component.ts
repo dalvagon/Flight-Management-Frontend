@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 import { Flight } from 'src/app/data/schema/flight';
 import { FlightService } from 'src/app/data/service/flight.service';
@@ -10,17 +11,31 @@ import { FlightService } from 'src/app/data/service/flight.service';
 })
 export class FlightsComponent implements OnInit {
   flights: Flight[] = [];
+  departureCity?: string;
+  destinationCity?: string;
 
-  constructor(private flightService: FlightService) {}
+  constructor(
+    private flightService: FlightService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.flightService
-      .getFlights()
-      .pipe(first())
-      .subscribe((data) =>
-        data.forEach((flight) => {
-          this.flights.push(flight);
-        })
-      );
+    this.route.queryParams.subscribe((params) => {
+      this.departureCity = params['departureCity'];
+      this.destinationCity = params['destinationCity'];
+    });
+
+    console.log(this.departureCity, this.destinationCity);
+
+    if (this.departureCity && this.destinationCity) {
+      this.flightService
+        .getFlights(this.departureCity, this.destinationCity)
+        .pipe(first())
+        .subscribe((data) =>
+          data.forEach((flight) => {
+            this.flights.push(flight);
+          })
+        );
+    }
   }
 }

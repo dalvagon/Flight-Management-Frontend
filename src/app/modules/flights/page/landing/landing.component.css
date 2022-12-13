@@ -80,9 +80,7 @@ img {
 }
 
 .region-dropdown.p-dropdown,
-.region-dropdown.p-dropdown-open,
-.region-dropdown.p-dropdown:hover,
-.region-dropdown.p-dropdown-open:hover {
+.region-dropdown.p-dropdown:not(:focus) {
     width: 400px;
     background-color: #CAC9EE;
     outline: none;
@@ -117,7 +115,8 @@ img {
 }
 
 .p-button,
-.p-button:hover {
+.p-button:hover,
+.p-button:not(:focus) {
     background-color: #00C6C3 !important;
     color: #050423 !important;
     outline: none;
@@ -132,7 +131,7 @@ img {
     color: #050423;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .cards {
         display: flex;
         flex-direction: column;
@@ -144,13 +143,10 @@ img {
         margin-bottom: 50px;
     }
 
-    .booking-tab {
+    .booking-subtab {
+        display: flex;
         flex-direction: column;
-    }
-
-    .button {
-        padding: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
+        align-items: center;
+        justify-content: space-around;
     }
 }
