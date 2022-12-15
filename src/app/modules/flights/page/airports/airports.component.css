@@ -1,9 +1,7 @@
 .content {
-    position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
 }
@@ -18,17 +16,22 @@
     align-items: center;
 }
 
-button {
-    background-color: #00C6C3;
+
+.p-button,
+.p-button:hover,
+.p-button:not(:focus) {
+    background-color: #00C6C3 !important;
+    color: #050423 !important;
     outline: none;
     border: none;
-    color: #050423;
-    margin-top: 40px;
+    width: auto;
+    margin: 0;
+    margin-top: 20px;
+    box-shadow: none;
 }
 
-button:hover {
-    background-color: #050423 !important;
-    color: #CAC9EE !important;
+.p-button .pi {
+    color: #050423;
 }
 
 

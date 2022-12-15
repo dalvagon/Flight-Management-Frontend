@@ -16,10 +16,7 @@ export class AirportService {
     return this._httpClient.get<Airport[]>(this.API_URL + '/airports');
   }
 
-  createAirport(formData: FormData): Observable<any> {
-    var airport: any = {};
-    formData.forEach((value, key) => (airport[key] = value));
-
+  createAirport(airport: any): Observable<any> {
     const options = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };

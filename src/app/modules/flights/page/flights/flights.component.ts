@@ -25,8 +25,6 @@ export class FlightsComponent implements OnInit {
       this.destinationCity = params['destinationCity'];
     });
 
-    console.log(this.departureCity, this.destinationCity);
-
     if (this.departureCity && this.destinationCity) {
       this.flightService
         .getFlights(this.departureCity, this.destinationCity)

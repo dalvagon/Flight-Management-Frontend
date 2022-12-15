@@ -8,7 +8,10 @@ import {
 } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { first } from 'rxjs';
+import { City } from 'src/app/data/schema/city';
+import { Country } from 'src/app/data/schema/country';
 import { AirportService } from 'src/app/data/service/airport.service';
+import { RegionService } from 'src/app/data/service/region.service';
 
 @Component({
   selector: 'app-create-airport',
@@ -21,16 +24,45 @@ export class CreateAirportComponent implements OnInit {
   @Output() output: EventEmitter<boolean> = new EventEmitter();
   form = this.fb.group({
     name: ['', [Validators.required]],
-    addressId: ['', [Validators.required]],
+    number: ['', [Validators.required]],
+    street: ['', [Validators.required]],
     city: ['', [Validators.required]],
+    country: ['', [Validators.required]],
   });
+
+  countries: Country[] = [];
+  cities: City[] = [];
 
   constructor(
     private airportService: AirportService,
+    private regionsService: RegionService,
     private fb: FormBuilder
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.regionsService
+      .getCountries()
+      .pipe(first())
+      .subscribe((data) =>
+        data.forEach((country) => {
+          this.countries.push(country);
+        })
+      );
+  }
+
+  onCountrySelected($event: any) {
+    const countryName = $event.value.name;
+    this.cities = [];
+
+    this.regionsService
+      .getCitiesForCountry(countryName)
+      .pipe(first())
+      .subscribe((data) =>
+        data.forEach((city) => {
+          this.cities.push(city);
+        })
+      );
+  }
 
   close(): void {
     this.display = false;
@@ -39,22 +71,30 @@ export class CreateAirportComponent implements OnInit {
 
   submit(): void {
     const name = this.form.get('name')!.value;
-    const addressId = this.form.get('addressId')!.value;
-    const city = this.form.get('city')!.value;
+    const number = this.form.get('number')!.value;
+    const street = this.form.get('street')!.value;
+    const country: Country = JSON.parse(
+      JSON.stringify(this.form.get('country')!.value)
+    );
+    const city = JSON.parse(JSON.stringify(this.form.get('city')!.value));
 
-    let formData = new FormData();
-    if (name && addressId && city) {
-      formData.append('name', name);
-      formData.append('addressId', addressId);
-      formData.append('city', city);
+    if (name && number && street && city && country) {
+      const airport = {
+        name: name,
+        address: {
+          number: number,
+          street: street,
+          cityId: city.id,
+          countryId: country.id,
+        },
+      };
+
       this.airportService
-        .createAirport(formData)
+        .createAirport(airport)
         .pipe(first())
         .subscribe((response) => console.log(response));
-
       this.display = false;
       this.output.emit(this.display);
-
       window.location.reload();
     }
   }

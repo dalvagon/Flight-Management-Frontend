@@ -14,12 +14,12 @@ export class FlightService {
 
   getFlights(
     departureCity: string,
-    deestinationCity: string
+    destinationCity: string
   ): Observable<Flight[]> {
     return this._httpClient.get<Flight[]>(this.API_URL + '/flights', {
       params: {
         departureCity: departureCity,
-        destinationCity: deestinationCity,
+        destinationCity: destinationCity,
       },
     });
   }

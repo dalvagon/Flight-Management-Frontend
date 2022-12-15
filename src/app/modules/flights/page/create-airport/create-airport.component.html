@@ -3,10 +3,40 @@
     <form [formGroup]="form" (ngSubmit)="submit()">
         <label>Name</label>
         <input type="text" formControlName="name" placeholder="Name">
-        <label>Address</label>
-        <input type="text" formControlName="addressId" placeholder="AddressId">
+        <label>Number</label>
+        <input type="text" formControlName="number" placeholder="Number">
+        <label>Street</label>
+        <input type="text" formControlName="street" placeholder="Street">
         <label>City</label>
-        <input type="text" formControlName="city" placeholder="City">
-        <button type="submit" pButton label="Save"></button>
+        <p-dropdown styleClass="region-dropdown" [options]="countries" formControlName="country" optionLabel="name"
+            placeholder="City" (onChange)="onCountrySelected($event)" appendTo="body">
+            <ng-template let-country pTemplate="selectedItem">
+                <div class="country-item">
+                    <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                    {{country.name}}
+                </div>
+            </ng-template>
+            <ng-template let-country pTemplate="item">
+                <div class="country-item">
+                    <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                    {{country.name}}
+                </div>
+            </ng-template>
+        </p-dropdown>
+        <label>Country</label>
+        <p-dropdown styleClass="region-dropdown" [options]="cities" formControlName="city" optionLabel="name"
+            placeholder="City" appendTo="body">
+            <ng-template let-city pTemplate="selectedItem">
+                <div class="city-item">
+                    {{city.name}}
+                </div>
+            </ng-template>
+            <ng-template let-city pTemplate="item">
+                <div class="country-item">
+                    {{city.name}}
+                </div>
+            </ng-template>
+        </p-dropdown>
+        <button type="button" (click)="submit()" pButton label="Create"></button>
     </form>
 </p-dialog>
