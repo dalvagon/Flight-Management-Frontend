@@ -1,11 +1,6 @@
-<video autoplay [muted]="'muted'" loop id="landingBackgroundVideo">
-    <source src="../assets/landingbackground.mp4" type="video/mp4" />
-</video>
-
-
-<div class="content">
-    <div class="booking-tab">
-        <p>From:</p>
+<div class="choose-cities-content">
+    <div>
+        <label>Departure country:</label>
         <div class="booking-subtab">
             <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedDepartureCountry"
                 optionLabel="name" placeholder="Select departure country"
@@ -24,6 +19,7 @@
                 </ng-template>
             </p-dropdown>
 
+            <label>Departure city:</label>
             <p-dropdown styleClass="region-dropdown" [options]="departureCities" [(ngModel)]="selectedDepartureCity"
                 optionLabel="name" placeholder="Select departure city" (onChange)="onDepartureCitySelected($event)">
                 <ng-template let-city pTemplate="selectedItem">
@@ -39,9 +35,9 @@
             </p-dropdown>
         </div>
         <ng-container *ngIf="departureCitySelected">
-            <i class="bi bi-airplane"></i>
-            <p>To:</p>
+            <hr>
             <div class="booking-subtab">
+                <label>Destination country:</label>
                 <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedDestinationCountry"
                     optionLabel="name" placeholder="Select arrival country"
                     (onChange)="onArrivalCountrySelected($event)">
@@ -59,6 +55,7 @@
                     </ng-template>
                 </p-dropdown>
 
+                <label>Destination city:</label>
                 <p-dropdown styleClass="region-dropdown" [options]="arrivalCities" [(ngModel)]="selectedDestinationCity"
                     optionLabel="name" placeholder="Select arrival city" (onChange)="onDestinationCitySelected($event)">
                     <ng-template let-city pTemplate="selectedItem">
@@ -73,22 +70,8 @@
                     </ng-template>
                 </p-dropdown>
             </div>
-            <button type="button" (click)="submit()" pButton icon="bi bi-search" label="Search for flights"
+            <button type="button" (click)="submit()" pButton icon="bi bi-chevron-right" label="Next"
                 *ngIf="destinationCitySelected"></button>
         </ng-container>
-    </div>
-    <div class="cards">
-        <div class="card">
-            <img src="../../../../../assets/airplane1.jpg" alt="airplane1">
-            <p>Same Day Flights</p>
-        </div>
-        <div class="card">
-            <img src="../../../../../assets/airplane2.jpg" alt="airplane2">
-            <p>Group Travel</p>
-        </div>
-        <div class="card">
-            <img src="../../../../../assets/airplane3.jpg" alt="airplane3">
-            <p>Vacation package deals</p>
-        </div>
     </div>
 </div>

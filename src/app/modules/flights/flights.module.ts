@@ -10,6 +10,12 @@ import { DialogModule } from 'primeng/dialog';
 import { AirportsComponent } from './page/airports/airports.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
+import { CreateFlightComponent } from './page/create-flight/create-flight.component';
+import { StepsModule } from 'primeng/steps';
+import { ChooseCitiesComponent } from './page/create-flight/choose-cities/choose-cities.component';
+import { ChooseAirportsComponent } from './page/create-flight/choose-airports/choose-airports.component';
+import { AddFlightDetailsComponent } from './page/create-flight/add-flight-details/add-flight-details.component';
+import { ListboxModule } from 'primeng/listbox';
 
 @NgModule({
   declarations: [
@@ -18,6 +24,10 @@ import { DropdownModule } from 'primeng/dropdown';
     FlightDetailsComponent,
     CreateAirportComponent,
     AirportsComponent,
+    CreateFlightComponent,
+    ChooseCitiesComponent,
+    ChooseAirportsComponent,
+    AddFlightDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -28,6 +38,8 @@ import { DropdownModule } from 'primeng/dropdown';
     ReactiveFormsModule,
     DropdownModule,
     FormsModule,
+    StepsModule,
+    ListboxModule,
   ],
 })
 export class FlightsModule {}

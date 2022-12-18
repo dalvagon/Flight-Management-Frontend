@@ -1,18 +1,18 @@
+import { AirportService } from 'src/app/data/service/airport.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { first } from 'rxjs';
 import { City } from 'src/app/data/schema/city';
 import { Country } from 'src/app/data/schema/country';
+import { first } from 'rxjs';
+import { Router } from '@angular/router';
 import { RegionService } from 'src/app/data/service/region.service';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css'],
+  selector: 'app-choose-cities',
+  templateUrl: './choose-cities.component.html',
+  styleUrls: ['./choose-cities.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class LandingComponent implements OnInit {
+export class ChooseCitiesComponent implements OnInit {
   countries: Country[] = [];
   departureCities: City[] = [];
   arrivalCities: City[] = [];
@@ -23,14 +23,9 @@ export class LandingComponent implements OnInit {
   departureCitySelected: boolean = false;
   destinationCitySelected: boolean = false;
 
-  form = this.fb.group({
-    country: ['', [Validators.required]],
-    city: ['', [Validators.required]],
-  });
-
   constructor(
     private regionService: RegionService,
-    private fb: FormBuilder,
+    private airportService: AirportService,
     private router: Router
   ) {}
 
@@ -83,11 +78,10 @@ export class LandingComponent implements OnInit {
   }
 
   submit() {
-    this.router.navigate(['/flights'], {
-      queryParams: {
-        departureCity: this.selectedDepartureCity?.name,
-        destinationCity: this.selectedDestinationCity?.name,
-      },
-    });
+    if (this.selectedDepartureCity && this.selectedDestinationCity) {
+      this.airportService.departureCity = this.selectedDepartureCity;
+      this.airportService.destinationCity = this.selectedDestinationCity;
+      this.router.navigate(['/flights/create/choose-airports']);
+    }
   }
 }

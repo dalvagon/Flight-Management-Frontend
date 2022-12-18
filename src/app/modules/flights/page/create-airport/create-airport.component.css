@@ -2,23 +2,27 @@
     width: 500px;
 }
 
+.create-airport-dialog input {
+    color: #FFF3FA;
+}
+
 .create-airport-dialog .p-dialog-header {
-    background-color: #CAC9EE !important;
-    color: #050423 !important;
+    background-color: #131C2A !important;
+    color: #FFF3FA !important;
 }
 
 .create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close {
-    color: #050423 !important;
+    color: #FFF3FA !important;
 }
 
 .create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close:hover {
-    background-color: #050423 !important;
-    color: #CAC9EE !important;
+    background-color: #FFF3FA !important;
+    color: #131C2A !important;
 }
 
 .create-airport-dialog .p-dialog-content {
-    background-color: #CAC9EE !important;
-    color: #050423 !important;
+    background-color: #131C2A !important;
+    color: #FFF3FA !important;
 }
 
 .create-airport-dialog .p-dialog-content form {
@@ -29,11 +33,11 @@
 
 .create-airport-dialog .p-dialog-content form input {
     width: 100%;
-    border: 1px solid #050423;
-    background-color: #CAC9EE;
+    border: 1px solid #FFF3FA;
+    background-color: #131C2A;
     outline: none;
     height: 40px;
-    font-size: 15px;
+    font-size: 12px;
     text-indent: 4px;
     border-radius: 4px;
     margin-bottom: 15px;
@@ -42,29 +46,26 @@
 .create-airport-dialog .region-dropdown.p-dropdown,
 .region-dropdown.p-dropdown:not(:focus) {
     width: 100%;
-    background-color: #CAC9EE;
+    background-color: #131C2A;
     outline: none;
     box-shadow: none;
-    border: 1px solid #050423;
+    border: 1px solid #FFF3FA;
     height: 40px;
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    font-size: 15px;
     text-indent: 4px;
 }
 
 .p-dropdown-items-wrapper {
-    background-color: #CAC9EE;
+    background-color: #131C2A;
 }
 
 .region-dropdown.p-dropdown .p-dropdown-label.p-inputtext {
-    font-size: 15px;
     text-indent: 4px;
     text-transform: none;
     font-weight: bold;
     padding: 0;
-
     font-family: 'Catamaran', sans-serif;
 
 }
@@ -73,6 +74,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 13px;
 }
 
 .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item {
@@ -82,28 +84,20 @@
 }
 
 .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .fi {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 20px;
-}
-
-.pi {
-    color: #00C6C3;
 }
 
 .p-button,
 .p-button:hover,
 .p-button:not(:focus) {
-    background-color: #00C6C3 !important;
-    color: #050423 !important;
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
     outline: none;
     border: none;
     width: auto;
     margin: auto;
     margin-top: 20px;
-    box-shadow: none;
-}
-
-.p-button .pi {
-    color: #050423;
+    box-shadow: none !important;
 }

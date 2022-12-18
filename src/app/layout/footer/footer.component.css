@@ -2,8 +2,8 @@
   position: relative;
   width: 100%;
   height: auto;
-  color: #050423;
-  background-color: #CAC9EE;
+  color: #FFF3FA;
+  background-color: #000;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -31,12 +31,12 @@
 
 .left-side {
   width: 50%;
-  border-right: 1px solid #050423;
+  border-right: 1px solid #FFF3FA;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  color: #00C6C3;
+  color: #FFF3FA;
   font-size: 40px;
 }
 
@@ -59,14 +59,14 @@
   font-size: 20px;
   padding-left: 10px;
   padding-right: 10px;
-  color: #050423;
+  color: #FFF3FA;
   transition: ease-in-out 200ms;
   text-decoration: none;
 }
 
 .link:hover {
   cursor: pointer;
-  color: #00C6C3;
+  color: #9296F0;
 }
 
 

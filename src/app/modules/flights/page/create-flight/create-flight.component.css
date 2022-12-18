@@ -1,0 +1,39 @@
+.content {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.steps {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.steps ul {
+    background-color: #000;
+}
+
+.steps .p-steps-item,
+.steps .p-steps-item:not(:focus) {
+    background-color: #131C2A;
+    padding: 20px;
+}
+
+.steps .p-steps-item .p-menuitem-link,
+.steps .p-steps-item .p-menuitem-link-active,
+.steps .p-steps-item .p-menuitem-link-active:not(:focus) {
+    outline: none !important;
+    border: none;
+    box-shadow: none !important;
+}
+
+.steps .p-steps-item .p-menuitem-link {
+    background-color: #131C2A;
+}
+
+.steps .p-steps-number {
+    background: #131C2A !important;
+    color: #FFF3FA !important;
+}

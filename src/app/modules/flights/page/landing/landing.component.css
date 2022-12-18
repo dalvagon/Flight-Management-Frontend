@@ -26,9 +26,9 @@
 }
 
 .card {
-    font-size: 30px;
-    color: #CAC9EE;
-    background-color: #050423;
+    font-size: 15px;
+    color: #FFF3FA;
+    background-color: #131C2A;
     transition: ease-in-out 300ms;
 }
 
@@ -37,9 +37,9 @@
 }
 
 .card:hover {
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
-    color: #00C6C3;
+    color: #9296F0;
 }
 
 img {
@@ -50,14 +50,14 @@ img {
 }
 
 .booking-tab {
-    background-color: #050423;
+    background-color: #131C2A;
     padding: 50px;
     height: auto;
     margin: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    color: #CAC9EE;
+    color: #FFF3FA;
 }
 
 .booking-tab p {
@@ -67,9 +67,9 @@ img {
 
 .booking-tab i {
     padding: 10px;
-    font-size: 40px;
+    font-size: 35px;
     margin: auto;
-    color: #CAC9EE;
+    color: #FFF3FA;
 }
 
 .booking-subtab {
@@ -81,15 +81,15 @@ img {
 
 .region-dropdown.p-dropdown,
 .region-dropdown.p-dropdown:not(:focus) {
-    width: 400px;
-    background-color: #CAC9EE;
+    min-width: 450px;
+    background-color: #FFF3FA;
     outline: none;
     box-shadow: none;
-    border: 1px solid #050423;
+    border: 1px solid #131C2A;
 }
 
 .region-dropdown.p-dropdown .p-dropdown-items-wrapper {
-    background-color: #CAC9EE;
+    background-color: #FFF3FA;
 }
 
 .region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
@@ -102,6 +102,7 @@ img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-size: 12px;
 }
 
 .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .fi {
@@ -110,15 +111,16 @@ img {
     margin-right: 20px;
 }
 
-.pi {
-    color: #00C6C3;
+.booking-tab .bi {
+    color: #FFF3FA;
+    transform: rotate(180deg);
 }
 
 .p-button,
 .p-button:hover,
 .p-button:not(:focus) {
-    background-color: #00C6C3 !important;
-    color: #050423 !important;
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
     outline: none;
     border: none;
     width: auto;
@@ -127,8 +129,9 @@ img {
     box-shadow: none;
 }
 
-.p-button .pi {
-    color: #050423;
+.p-button .bi {
+    color: #131C2A;
+    transform: none;
 }
 
 @media only screen and (max-width: 1000px) {

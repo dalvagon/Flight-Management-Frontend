@@ -4,24 +4,48 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #FFF3FA;
 }
 
 .airport {
     width: 80%;
     margin-top: 40px;
-    background-color: #CAC9EE;
-    padding: 10px;
+    background-color: #131C2A;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    border-radius: 5px;
 }
 
+.title {
+    background-color: #9296F0;
+    color: #131C2A;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.delete-icon:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+.location {
+    color: #FFF3FA;
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+}
 
 .p-button,
 .p-button:hover,
 .p-button:not(:focus) {
-    background-color: #00C6C3 !important;
-    color: #050423 !important;
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
     outline: none;
     border: none;
     width: auto;
@@ -30,21 +54,9 @@
     box-shadow: none;
 }
 
-.p-button .pi {
-    color: #050423;
-}
+.p-button .bi {
+    color: #131C2A;
 
-
-.delete-icon {
-    font-size: 20px;
-    margin-top: 20px;
-    color: red;
-    transition: ease-in-out 200ms;
-}
-
-.delete-icon:hover {
-    cursor: pointer;
-    transform: rotate(90deg);
 }
 
 @media only screen and (max-width: 900px) {

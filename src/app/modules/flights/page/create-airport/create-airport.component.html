@@ -1,5 +1,5 @@
 <p-dialog styleClass="create-airport-dialog" header="Create airport" [(visible)]="display" (onHide)="close()"
-    [resizable]="false" [draggable]="false" [modal]="true">
+    [resizable]="false" [draggable]="false" [modal]="true" [contentStyle]="{'overflow':'visible'}">
     <form [formGroup]="form" (ngSubmit)="submit()">
         <label>Name</label>
         <input type="text" formControlName="name" placeholder="Name">
@@ -7,9 +7,9 @@
         <input type="text" formControlName="number" placeholder="Number">
         <label>Street</label>
         <input type="text" formControlName="street" placeholder="Street">
-        <label>City</label>
+        <label>Country</label>
         <p-dropdown styleClass="region-dropdown" [options]="countries" formControlName="country" optionLabel="name"
-            placeholder="City" (onChange)="onCountrySelected($event)" appendTo="body">
+            placeholder="Country" (onChange)="onCountrySelected($event)">
             <ng-template let-country pTemplate="selectedItem">
                 <div class="country-item">
                     <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
@@ -23,9 +23,9 @@
                 </div>
             </ng-template>
         </p-dropdown>
-        <label>Country</label>
+        <label>City</label>
         <p-dropdown styleClass="region-dropdown" [options]="cities" formControlName="city" optionLabel="name"
-            placeholder="City" appendTo="body">
+            placeholder="City">
             <ng-template let-city pTemplate="selectedItem">
                 <div class="city-item">
                     {{city.name}}
@@ -37,6 +37,6 @@
                 </div>
             </ng-template>
         </p-dropdown>
-        <button type="button" (click)="submit()" pButton label="Create"></button>
+        <button type="submit" pButton label="Create"></button>
     </form>
 </p-dialog>

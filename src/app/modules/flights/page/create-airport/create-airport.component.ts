@@ -35,12 +35,12 @@ export class CreateAirportComponent implements OnInit {
 
   constructor(
     private airportService: AirportService,
-    private regionsService: RegionService,
+    private regionService: RegionService,
     private fb: FormBuilder
   ) {}
 
   ngOnInit(): void {
-    this.regionsService
+    this.regionService
       .getCountries()
       .pipe(first())
       .subscribe((data) =>
@@ -52,16 +52,17 @@ export class CreateAirportComponent implements OnInit {
 
   onCountrySelected($event: any) {
     const countryName = $event.value.name;
-    this.cities = [];
 
-    this.regionsService
+    this.regionService
       .getCitiesForCountry(countryName)
       .pipe(first())
-      .subscribe((data) =>
+      .subscribe((data) => {
+        this.cities = [];
+
         data.forEach((city) => {
-          this.cities.push(city);
-        })
-      );
+          this.cities = [...this.cities, city];
+        });
+      });
   }
 
   close(): void {
