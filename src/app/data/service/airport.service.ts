@@ -33,7 +33,6 @@ export class AirportService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
 
-    console.log(airport);
     return this._httpClient.post(
       this.API_URL + '/airports',
       JSON.stringify(airport),

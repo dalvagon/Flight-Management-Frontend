@@ -2,8 +2,8 @@
   position: relative;
   width: 100%;
   height: auto;
-  color: #FFF3FA;
-  background-color: #000;
+  color: #EEE8A9;
+  background-color: #131c2ae0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -31,12 +31,12 @@
 
 .left-side {
   width: 50%;
-  border-right: 1px solid #FFF3FA;
+  border-right: 1px solid #EEE8A9;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  color: #FFF3FA;
+  color: #EEE8A9;
   font-size: 40px;
 }
 
@@ -59,7 +59,7 @@
   font-size: 20px;
   padding-left: 10px;
   padding-right: 10px;
-  color: #FFF3FA;
+  color: #EEE8A9;
   transition: ease-in-out 200ms;
   text-decoration: none;
 }

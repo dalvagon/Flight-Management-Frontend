@@ -42,7 +42,8 @@ export class AirportsComponent implements OnInit {
     this.airportService
       .deleteAirport(id)
       .pipe(first())
-      .subscribe((response) => console.log(response));
-    window.location.reload();
+      .subscribe(() => {
+        window.location.reload();
+      });
   }
 }

@@ -16,48 +16,17 @@
     align-items: center;
 }
 
-.cards {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 50px;
-}
-
-.card {
-    font-size: 15px;
-    color: #FFF3FA;
-    background-color: #131C2A;
-    transition: ease-in-out 300ms;
-}
-
-.card p {
-    padding: 10px;
-}
-
-.card:hover {
-    font-size: 20px;
-    cursor: pointer;
-    color: #9296F0;
-}
-
-img {
-    max-width: 300px;
-    max-height: 200px;
-    min-width: 300px;
-    min-height: 200px;
-}
 
 .booking-tab {
-    background-color: #131C2A;
+    background-color: #131C2A75;
+    border-radius: 5px;
     padding: 50px;
     height: auto;
     margin: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    color: #FFF3FA;
+    color: #EEE8A9;
 }
 
 .booking-tab p {
@@ -69,7 +38,7 @@ img {
     padding: 10px;
     font-size: 35px;
     margin: auto;
-    color: #FFF3FA;
+    color: #EEE8A9;
 }
 
 .booking-subtab {
@@ -82,14 +51,14 @@ img {
 .region-dropdown.p-dropdown,
 .region-dropdown.p-dropdown:not(:focus) {
     min-width: 450px;
-    background-color: #FFF3FA;
+    background-color: #EEE8A9;
     outline: none;
     box-shadow: none;
     border: 1px solid #131C2A;
 }
 
 .region-dropdown.p-dropdown .p-dropdown-items-wrapper {
-    background-color: #FFF3FA;
+    background-color: #EEE8A9;
 }
 
 .region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
@@ -112,7 +81,7 @@ img {
 }
 
 .booking-tab .bi {
-    color: #FFF3FA;
+    color: #EEE8A9;
     transform: rotate(180deg);
 }
 
@@ -134,18 +103,124 @@ img {
     transform: none;
 }
 
+
+.cards {
+    width: 90%;
+    height: 800px;
+    display: grid;
+    gap: 0;
+    padding: 0;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+
+.cell1 {
+    grid-area: 1 / 1 / span 4 / span 4;
+    background: url("src/assets/airplane8.jpg");
+    background-size: cover;
+    color: #AA2282;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    padding: 120px;
+}
+
+.cell2 {
+    grid-area: 1 / 5 / span 2 / span 2;
+    background-color: #EF8041;
+    color: #EEE8A9;
+    font-size: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cell2 p {
+    font-size: 15px;
+}
+
+.cell3 {
+    grid-area: 3 / 5 / span 2 / span 2;
+    background-color: #3F8D8B;
+    color: #EEE8A9;
+    font-size: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cell3 p {
+    font-size: 15px;
+}
+
+.cell4 {
+    grid-area: 1 / 7 / span 4 / span 2;
+    background: url("src/assets/airplane5.jpg");
+    background-size: cover;
+}
+
+.cell5 {
+    grid-area: 1 / 9 / span 4 / span 2;
+    background: url("src/assets/airplane4.jpg");
+    background-size: cover;
+}
+
+.cell6 {
+    grid-area: 5 / 1 / span 2 / span 6;
+    background-color: #FF646F;
+    color: #EEE8A9;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.cell6 i {
+    margin-right: 10px;
+}
+
+.cell7 {
+    grid-area: 7 / 1 / span 2 / span 3;
+    background: url("src/assets/airplane3.jpg");
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.cell8 {
+    grid-area: 7 / 4 / span 2 / span 3;
+    background: url("src/assets/airplane2.jpg");
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.cell9 {
+    grid-area: 5 / 7 / span 4 / span 4;
+    background: url("src/assets/airplane1.jpg");
+    background-size: cover;
+    padding: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
 @media only screen and (max-width: 1000px) {
-    .cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .card {
-        margin-bottom: 50px;
-    }
-
     .booking-subtab {
         display: flex;
         flex-direction: column;

@@ -3,26 +3,26 @@
 }
 
 .create-airport-dialog input {
-    color: #FFF3FA;
+    color: #131C2A;
 }
 
 .create-airport-dialog .p-dialog-header {
-    background-color: #131C2A !important;
-    color: #FFF3FA !important;
-}
-
-.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close {
-    color: #FFF3FA !important;
-}
-
-.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close:hover {
-    background-color: #FFF3FA !important;
+    background-color: #9296F0 !important;
     color: #131C2A !important;
 }
 
-.create-airport-dialog .p-dialog-content {
+.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close {
+    color: #131C2A !important;
+}
+
+.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close:hover {
     background-color: #131C2A !important;
-    color: #FFF3FA !important;
+    color: #9296F0 !important;
+}
+
+.create-airport-dialog .p-dialog-content {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
 }
 
 .create-airport-dialog .p-dialog-content form {
@@ -33,11 +33,11 @@
 
 .create-airport-dialog .p-dialog-content form input {
     width: 100%;
-    border: 1px solid #FFF3FA;
-    background-color: #131C2A;
+    border: none;
+    background-color: #EEE8A9;
     outline: none;
     height: 40px;
-    font-size: 12px;
+    font-size: 15px;
     text-indent: 4px;
     border-radius: 4px;
     margin-bottom: 15px;
@@ -46,10 +46,10 @@
 .create-airport-dialog .region-dropdown.p-dropdown,
 .region-dropdown.p-dropdown:not(:focus) {
     width: 100%;
-    background-color: #131C2A;
+    background-color: #EEE8A9;
     outline: none;
     box-shadow: none;
-    border: 1px solid #FFF3FA;
+    border: none;
     height: 40px;
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@
 }
 
 .p-dropdown-items-wrapper {
-    background-color: #131C2A;
+    background-color: #EEE8A9;
 }
 
 .region-dropdown.p-dropdown .p-dropdown-label.p-inputtext {
@@ -94,8 +94,8 @@
 .p-button:not(:focus) {
     background-color: #9296F0 !important;
     color: #131C2A !important;
+    border: 1px solid #131C2A !important;
     outline: none;
-    border: none;
     width: auto;
     margin: auto;
     margin-top: 20px;

@@ -1,0 +1,13 @@
+.add-flight-details-content {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    height: fit-content;
+    background-color: #131C2A;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    color: #EEE8A9;
+}

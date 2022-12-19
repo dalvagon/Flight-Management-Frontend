@@ -1,4 +1,4 @@
-import { FormBuilder, Validators } from '@angular/forms';
+import { FlightService } from 'src/app/data/service/flight.service';
 import { AirportService } from 'src/app/data/service/airport.service';
 import { Router } from '@angular/router';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
@@ -17,16 +17,13 @@ export class ChooseAirportsComponent implements OnInit {
   destinationCity?: City;
   departureAirports: Airport[] = [];
   destinationAirports: Airport[] = [];
-
-  form = this.fb.group({
-    departureAirport: ['', [Validators.required]],
-    destinationAirport: ['', [Validators.required]],
-  });
+  departureAirport?: Airport;
+  destinationAirport?: Airport;
 
   constructor(
     private airportService: AirportService,
-    private router: Router,
-    private fb: FormBuilder
+    private flightService: FlightService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -42,7 +39,6 @@ export class ChooseAirportsComponent implements OnInit {
         .subscribe((airports) =>
           airports.forEach((airport) => {
             this.departureAirports = [...this.departureAirports, airport];
-            console.log(airport);
           })
         );
 
@@ -62,9 +58,11 @@ export class ChooseAirportsComponent implements OnInit {
   }
 
   submit() {
-    console.log(
-      this.form.get('departureAirport')?.value,
-      this.form.get('destinationAirport')?.value
-    );
+    if (this.departureAirport && this.destinationAirport) {
+      console.log(this.departureAirport, this.destinationAirport);
+      this.flightService.departureAirport = this.departureAirport;
+      this.flightService.destinationAirport = this.destinationAirport;
+      this.router.navigate(['/flights/create/add-flight-details']);
+    }
   }
 }

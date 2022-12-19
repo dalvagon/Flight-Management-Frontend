@@ -93,10 +93,11 @@ export class CreateAirportComponent implements OnInit {
       this.airportService
         .createAirport(airport)
         .pipe(first())
-        .subscribe((response) => console.log(response));
+        .subscribe(() => {
+          window.location.reload();
+        });
       this.display = false;
       this.output.emit(this.display);
-      window.location.reload();
     }
   }
 }

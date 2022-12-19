@@ -1,27 +1,27 @@
 <div class="choose-airports-content">
-    <form [formGroup]="form" (ngSubmit)="submit()">
-        <label class="title">Airports from {{departureCity?.name}}, {{departureCity?.country?.name}}:</label>
-        <p-listbox [options]="departureAirports" formControlName="departureAirport">
-            <ng-template let-airport pTemplate="item">
-                <div>{{airport.name}} Airport</div>
-            </ng-template>
+    <label class="title">Airports from {{departureCity?.name}}, {{departureCity?.country?.name}}:</label>
+    <p-listbox [options]="departureAirports" [(ngModel)]="departureAirport">
+        <ng-template let-airport pTemplate="item">
+            <div>{{airport.name}} Airport</div>
+        </ng-template>
 
-            <ng-template pTemplate="empty">
-                <div>No airports found</div>
-            </ng-template>
-        </p-listbox>
+        <ng-template pTemplate="empty">
+            <div>No airports found</div>
+        </ng-template>
+    </p-listbox>
 
-        <label class="title">Airports from {{destinationCity?.name}}, {{destinationCity?.country?.name}}:</label>
-        <p-listbox [options]="destinationAirports" formControlName="destinationAirport">
-            <ng-template let-airport pTemplate="item">
-                <div>{{airport.name}} Airport</div>
-            </ng-template>
+    <label class="title">Airports from {{destinationCity?.name}}, {{destinationCity?.country?.name}}:</label>
+    <p-listbox [options]="destinationAirports" [(ngModel)]="destinationAirport">
+        <ng-template let-airport pTemplate="item">
+            <div>{{airport.name}} Airport</div>
+        </ng-template>
 
-            <ng-template pTemplate="empty">
-                <div>No airports found</div>
-            </ng-template>
-        </p-listbox>
+        <ng-template pTemplate="empty">
+            <div>No airports found</div>
+        </ng-template>
+    </p-listbox>
 
-        <button type="submit" pButton label="Next" icon="bi bi-chevron-right"></button>
-    </form>
+    <div>
+        <button type="submit" pButton label="Next" icon="bi bi-chevron-right" (click)="submit()"></button>
+    </div>
 </div>
