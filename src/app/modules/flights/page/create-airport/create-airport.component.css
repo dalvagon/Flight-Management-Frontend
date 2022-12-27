@@ -7,22 +7,22 @@
 }
 
 .create-airport-dialog .p-dialog-header {
-    background-color: #9296F0 !important;
-    color: #131C2A !important;
+    background-color: #131C2A !important;
+    color: #EEE8A9 !important;
 }
 
 .create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close {
-    color: #131C2A !important;
-}
-
-.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close:hover {
-    background-color: #131C2A !important;
     color: #9296F0 !important;
 }
 
-.create-airport-dialog .p-dialog-content {
+.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close:hover {
     background-color: #9296F0 !important;
     color: #131C2A !important;
+}
+
+.create-airport-dialog .p-dialog-content {
+    background-color: #131C2A !important;
+    color: #EEE8A9 !important;
 }
 
 .create-airport-dialog .p-dialog-content form {

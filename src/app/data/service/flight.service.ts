@@ -1,5 +1,5 @@
 import { Airport } from './../schema/airport';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -29,5 +29,17 @@ export class FlightService {
 
   getFlight(id: string): Observable<Flight> {
     return this._httpClient.get<Flight>(this.API_URL + `/flights/${id}`);
+  }
+
+  createFlight(flight: any): Observable<any> {
+    const options = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    };
+
+    return this._httpClient.post(
+      this.API_URL + '/flights',
+      JSON.stringify(flight),
+      options
+    );
   }
 }

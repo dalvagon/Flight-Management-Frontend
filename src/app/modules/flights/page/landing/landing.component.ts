@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs';
 import { City } from 'src/app/data/schema/city';
@@ -15,7 +14,7 @@ import { RegionService } from 'src/app/data/service/region.service';
 export class LandingComponent implements OnInit {
   countries: Country[] = [];
   departureCities: City[] = [];
-  arrivalCities: City[] = [];
+  destinationCities: City[] = [];
   selectedDepartureCountry?: Country;
   selectedDepartureCity?: City;
   selectedDestinationCountry?: Country;
@@ -23,16 +22,7 @@ export class LandingComponent implements OnInit {
   departureCitySelected: boolean = false;
   destinationCitySelected: boolean = false;
 
-  form = this.fb.group({
-    country: ['', [Validators.required]],
-    city: ['', [Validators.required]],
-  });
-
-  constructor(
-    private regionService: RegionService,
-    private fb: FormBuilder,
-    private router: Router
-  ) {}
+  constructor(private regionService: RegionService, private router: Router) {}
 
   ngOnInit(): void {
     this.regionService
@@ -59,17 +49,17 @@ export class LandingComponent implements OnInit {
       });
   }
 
-  onArrivalCountrySelected($event: any) {
+  onDestinationCountrySelected($event: any) {
     const countryName = $event.value.name;
 
     this.regionService
       .getCitiesForCountry(countryName)
       .pipe(first())
       .subscribe((data) => {
-        this.arrivalCities.length = 0;
+        this.destinationCities.length = 0;
 
         data.forEach((city) => {
-          this.arrivalCities = [...this.arrivalCities, city];
+          this.destinationCities = [...this.destinationCities, city];
         });
       });
   }

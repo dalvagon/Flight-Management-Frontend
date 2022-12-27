@@ -6,8 +6,69 @@
     background-color: #131C2A;
     padding: 50px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     border-radius: 15px;
     color: #EEE8A9;
+    margin-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form label {
+    margin-top: 20px;
+}
+
+.form .p-inputtext,
+.form .p-inputtext:focus {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+    min-width: 400px;
+}
+
+.form .p-inputnumber .increment-button,
+.form .p-inputnumber .decrement-button {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+    border: none;
+    outline: none;
+    margin: none;
+}
+
+.form .calendar.p-calendar input {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+    min-width: 400px;
+    margin: auto;
+}
+
+.form .calendar.p-calendar .p-button-icon-only {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+}
+
+.form .calendar.p-calendar .p-button-icon-only:hover {
+    background-color: #9296F0 !important;
+    color: #EEE8A9 !important;
+}
+
+.submit-button.p-button,
+.submit-button.p-button:hover,
+.submit-button.p-button:not(:focus) {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+    border: none;
+    width: auto;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: none !important;
 }

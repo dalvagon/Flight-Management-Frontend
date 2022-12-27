@@ -113,6 +113,11 @@
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     margin-bottom: 50px;
     border-radius: 5px;
+    transition: all ease-in-out 200ms;
+}
+
+.cards>div:hover {
+    opacity: 0.8;
 }
 
 .cell1 {

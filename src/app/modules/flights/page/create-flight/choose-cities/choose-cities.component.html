@@ -39,8 +39,8 @@
             <div class="booking-subtab">
                 <label>Destination country:</label>
                 <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedDestinationCountry"
-                    optionLabel="name" placeholder="Select arrival country"
-                    (onChange)="onArrivalCountrySelected($event)">
+                    optionLabel="name" placeholder="Select destination country"
+                    (onChange)="onDestinationCountrySelected($event)">
                     <ng-template let-country pTemplate="selectedItem">
                         <div class="country-item">
                             <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
@@ -56,8 +56,9 @@
                 </p-dropdown>
 
                 <label>Destination city:</label>
-                <p-dropdown styleClass="region-dropdown" [options]="arrivalCities" [(ngModel)]="selectedDestinationCity"
-                    optionLabel="name" placeholder="Select arrival city" (onChange)="onDestinationCitySelected($event)">
+                <p-dropdown styleClass="region-dropdown" [options]="destinationCities"
+                    [(ngModel)]="selectedDestinationCity" optionLabel="name" placeholder="Select destination city"
+                    (onChange)="onDestinationCitySelected($event)">
                     <ng-template let-city pTemplate="selectedItem">
                         <div class="city-item">
                             {{city.name}}

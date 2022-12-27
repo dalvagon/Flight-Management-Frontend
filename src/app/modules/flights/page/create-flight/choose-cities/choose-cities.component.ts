@@ -15,7 +15,7 @@ import { RegionService } from 'src/app/data/service/region.service';
 export class ChooseCitiesComponent implements OnInit {
   countries: Country[] = [];
   departureCities: City[] = [];
-  arrivalCities: City[] = [];
+  destinationCities: City[] = [];
   selectedDepartureCountry?: Country;
   selectedDepartureCity?: City;
   selectedDestinationCountry?: Country;
@@ -54,17 +54,17 @@ export class ChooseCitiesComponent implements OnInit {
       });
   }
 
-  onArrivalCountrySelected($event: any) {
+  onDestinationCountrySelected($event: any) {
     const countryName = $event.value.name;
 
     this.regionService
       .getCitiesForCountry(countryName)
       .pipe(first())
       .subscribe((data) => {
-        this.arrivalCities.length = 0;
+        this.destinationCities.length = 0;
 
         data.forEach((city) => {
-          this.arrivalCities = [...this.arrivalCities, city];
+          this.destinationCities = [...this.destinationCities, city];
         });
       });
   }

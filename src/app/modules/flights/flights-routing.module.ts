@@ -1,3 +1,4 @@
+import { AuthGuard } from './../../core/guard/auth.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AirportsComponent } from './page/airports/airports.component';
@@ -8,6 +9,7 @@ import { CreateFlightComponent } from './page/create-flight/create-flight.compon
 import { FlightDetailsComponent } from './page/flight-details/flight-details.component';
 import { FlightsComponent } from './page/flights/flights.component';
 import { LandingComponent } from './page/landing/landing.component';
+import { AdminGuard } from 'src/app/core/guard/admin.guard';
 
 const routes: Routes = [
   {
@@ -25,26 +27,39 @@ const routes: Routes = [
       {
         path: 'flights',
         component: FlightsComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: 'flights/create',
         component: CreateFlightComponent,
         children: [
-          { path: 'choose-cities', component: ChooseCitiesComponent },
-          { path: 'choose-airports', component: ChooseAirportsComponent },
+          {
+            path: 'choose-cities',
+            component: ChooseCitiesComponent,
+            canActivate: [AuthGuard],
+          },
+          {
+            path: 'choose-airports',
+            component: ChooseAirportsComponent,
+            canActivate: [AuthGuard],
+          },
           {
             path: 'add-flight-details',
             component: AddFlightDetailsComponent,
+            canActivate: [AuthGuard],
           },
         ],
+        canActivate: [AuthGuard, AdminGuard],
       },
       {
         path: 'flights/:id',
         component: FlightDetailsComponent,
+        canActivate: [AuthGuard, AdminGuard],
       },
       {
         path: 'airports',
         component: AirportsComponent,
+        canActivate: [AuthGuard, AdminGuard],
       },
     ],
   },

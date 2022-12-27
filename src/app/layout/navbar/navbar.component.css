@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-.nav-title {
+.navbar .nav-title {
   font-size: 35px;
   height: 100%;
   margin-left: 4%;
@@ -19,12 +19,12 @@
 
 }
 
-.links {
+.navbar .links {
   width: max-content;
   margin-right: 4%;
 }
 
-.link {
+.navbar .link {
   font-size: 15px;
   padding-left: 10px;
   padding-right: 10px;
@@ -33,11 +33,22 @@
   text-decoration: none;
 }
 
-.link:hover {
+.navbar .link:hover {
   cursor: pointer;
   color: #9296F0;
 }
 
-p-avatar:hover {
+.navbar p-avatar:hover {
   cursor: pointer;
+}
+
+.navbar .p-button,
+.navbar .p-button:hover,
+.navbar .p-button:not(:focus) {
+  background-color: #9296F0 !important;
+  color: #131C2A !important;
+  border: none !important;
+  width: auto;
+  margin: 0 !important;
+  box-shadow: none !important;
 }

@@ -1,4 +1,4 @@
-.content {
+.airports-content {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -8,7 +8,7 @@
     color: #EEE8A9;
 }
 
-.airport {
+.airports-content .airport {
     width: 80%;
     margin-top: 40px;
     background-color: #131C2A75;
@@ -18,7 +18,7 @@
     padding: 20px;
 }
 
-.title {
+.airports-content .title {
     background-color: #9296F075;
     color: #131C2A;
     padding: 10px;
@@ -30,49 +30,49 @@
     justify-content: space-between;
 }
 
-.delete-icon:hover {
+.airports-content .delete-icon:hover {
     cursor: pointer;
     color: #131C2A;
 }
 
-.location {
+.airports-content .location {
     color: #EEE8A9;
     font-size: 15px;
     padding: 5px;
     margin: 5px;
 }
 
-.p-button,
-.p-button:hover,
-.p-button:not(:focus) {
+.airports-content .p-button,
+.airports-content .p-button:hover,
+.airports-content .p-button:not(:focus) {
     background-color: #9296F0 !important;
     color: #131C2A !important;
     outline: none;
-    border: none;
+    border: none !important;
     width: auto;
     margin: 0;
     margin-top: 20px;
     box-shadow: none;
 }
 
-.p-button .bi {
+.airports-content .p-button .bi {
     color: #131C2A;
 
 }
 
 @media only screen and (max-width: 900px) {
-    .flight {
+    .airports-content .flight {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .cities {
+    .airports-content .cities {
         width: 100%;
         padding: 30px;
     }
 
-    .info {
+    .airports-content .info {
         width: 100%;
         padding: 30px;
     }

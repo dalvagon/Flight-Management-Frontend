@@ -13,21 +13,21 @@
     color: #EEE8A9;
 }
 
-label {
+.choose-cities-content label {
     margin-top: 15px;
     display: inline-block;
     margin-bottom: 5px;
 }
 
-hr {
+.choose-cities-content hr {
     width: 10%;
     margin: auto;
     border: 0;
     border-top: 3px solid #EEE8A9;
 }
 
-.region-dropdown.p-dropdown,
-.region-dropdown.p-dropdown:not(:focus) {
+.choose-cities-content .region-dropdown.p-dropdown,
+.choose-cities-content .region-dropdown.p-dropdown:not(:focus) {
     min-width: 450px;
     background-color: #EEE8A9;
     outline: none;
@@ -40,11 +40,11 @@ hr {
     text-indent: 4px;
 }
 
-.p-dropdown-items-wrapper {
+.choose-cities-content .p-dropdown-items-wrapper {
     background-color: #EEE8A9;
 }
 
-.region-dropdown.p-dropdown .p-dropdown-label.p-inputtext {
+.choose-cities-content .region-dropdown.p-dropdown .p-dropdown-label.p-inputtext {
     text-indent: 4px;
     text-transform: none;
     font-weight: bold;
@@ -52,15 +52,15 @@ hr {
     color: #131C2A;
 }
 
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
+.choose-cities-content .region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item,
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item:hover,
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item:not(:focus) {
+.choose-cities-content .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item,
+.choose-cities-content .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item:hover,
+.choose-cities-content .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item:not(:focus) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -69,15 +69,15 @@ hr {
 }
 
 
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .fi {
+.choose-cities-content .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .fi {
     width: 30px;
     height: 30px;
     margin-right: 20px;
 }
 
-.p-button,
-.p-button:hover,
-.p-button:not(:focus) {
+.choose-cities-content .p-button,
+.choose-cities-content .p-button:hover,
+.choose-cities-content .p-button:not(:focus) {
     background-color: #9296F0 !important;
     color: #131C2A !important;
     outline: none;
@@ -88,6 +88,6 @@ hr {
     box-shadow: none;
 }
 
-.p-button .bi {
+.choose-cities-content .p-button .bi {
     color: #131C2A;
 }

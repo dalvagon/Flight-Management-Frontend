@@ -12,7 +12,7 @@
     color: #FFF3FA;
 }
 
-.title {
+.choose-airports-content .title {
     background-color: #9296F0;
     color: #131C2A;
     padding: 15px;
@@ -25,9 +25,9 @@
     justify-content: space-between;
 }
 
-.p-button,
-.p-button:hover,
-.p-button:not(:focus) {
+.choose-airports-content .p-button,
+.choose-airports-content .p-button:hover,
+.choose-airports-content .p-button:not(:focus) {
     background-color: #9296F0 !important;
     color: #131C2A !important;
     outline: none;
@@ -37,11 +37,11 @@
     box-shadow: none !important;
 }
 
-.p-button .bi {
+.choose-airports-content .p-button .bi {
     color: #131C2A;
 }
 
-.p-listbox {
+.choose-airports-content .p-listbox {
     background-color: transparent;
     border: 0;
     padding: 0;
@@ -49,7 +49,7 @@
     margin-left: 40px;
 }
 
-.p-listbox-item {
+.choose-airports-content .p-listbox-item {
     background-color: #9296F0 !important;
     color: #131C2A !important;
     padding: 15px;
@@ -60,7 +60,7 @@
     transition: all ease-in-out 200ms !important;
 }
 
-.p-listbox-item.p-highlight {
+.choose-airports-content .p-listbox-item.p-highlight {
     background-color: #131C2A !important;
     color: #EEE8A9 !important;
     border: none !important;

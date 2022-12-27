@@ -31,7 +31,7 @@ export class FlightsComponent implements OnInit {
         .pipe(first())
         .subscribe((data) =>
           data.forEach((flight) => {
-            this.flights.push(flight);
+            this.flights = [...this.flights, flight];
           })
         );
     }

@@ -1,1 +1,9 @@
-<p>login works!</p>
+<div class="login-content">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <label>Email</label>
+        <input type="text" formControlName="email" placeholder="Email" pInputText />
+        <label>Password</label>
+        <p-password formControlName="password" [toggleMask]="true" [feedback]="false"></p-password>
+        <button type="submit" pButton label="Log In" class="login-button" [loading]="isLoading"></button>
+    </form>
+</div>

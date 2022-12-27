@@ -59,7 +59,6 @@ export class ChooseAirportsComponent implements OnInit {
 
   submit() {
     if (this.departureAirport && this.destinationAirport) {
-      console.log(this.departureAirport, this.destinationAirport);
       this.flightService.departureAirport = this.departureAirport;
       this.flightService.destinationAirport = this.destinationAirport;
       this.router.navigate(['/flights/create/add-flight-details']);
