@@ -44,7 +44,7 @@
 }
 
 .create-airport-dialog .region-dropdown.p-dropdown,
-.region-dropdown.p-dropdown:not(:focus) {
+.create-airport-dialog .region-dropdown.p-dropdown:not(:focus) {
     width: 100%;
     background-color: #EEE8A9;
     outline: none;
@@ -57,11 +57,11 @@
     text-indent: 4px;
 }
 
-.p-dropdown-items-wrapper {
+.create-airport-dialog .p-dropdown-items-wrapper {
     background-color: #EEE8A9;
 }
 
-.region-dropdown.p-dropdown .p-dropdown-label.p-inputtext {
+.create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-label.p-inputtext {
     text-indent: 4px;
     text-transform: none;
     font-weight: bold;
@@ -70,28 +70,28 @@
 
 }
 
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
+.create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 13px;
 }
 
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item {
+.create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .fi {
+.create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .fi {
     width: 25px;
     height: 25px;
     margin-right: 20px;
 }
 
-.p-button,
-.p-button:hover,
-.p-button:not(:focus) {
+.create-airport-dialog .p-button,
+.create-airport-dialog .p-button:hover,
+.create-airport-dialog .p-button:not(:focus) {
     background-color: #9296F0 !important;
     color: #131C2A !important;
     border: 1px solid #131C2A !important;

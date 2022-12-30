@@ -16,6 +16,18 @@ export class AuthService {
     this.userPayload = this.decodeToken();
   }
 
+  public register(credentials: any): Observable<any> {
+    const options = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    };
+
+    return this._httpClient.post<any>(
+      this.API_URL + '/people',
+      JSON.stringify(credentials),
+      options
+    );
+  }
+
   public logIn(credentials: any): Observable<Token> {
     const options = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -52,7 +64,7 @@ export class AuthService {
     return jwtHelper.decodeToken(token);
   }
 
-  getNameFromToken() {
+  public getNameFromToken() {
     if (this.userPayload) {
       return this.userPayload[
         'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'
@@ -60,7 +72,7 @@ export class AuthService {
     }
   }
 
-  getSurnameFromToken() {
+  public getSurnameFromToken() {
     if (this.userPayload) {
       return this.userPayload[
         'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname'
@@ -68,7 +80,7 @@ export class AuthService {
     }
   }
 
-  getRoleFromToken() {
+  public getRoleFromToken() {
     if (this.userPayload) {
       return this.userPayload[
         'http://schemas.microsoft.com/ws/2008/06/identity/claims/role'

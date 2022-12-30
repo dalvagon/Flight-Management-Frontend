@@ -13,11 +13,11 @@ export class RegionService {
 
   constructor(private _httpClient: HttpClient) {}
 
-  getCountries(): Observable<Country[]> {
+  public getCountries(): Observable<Country[]> {
     return this._httpClient.get<Country[]>(this.API_URL + '/countries');
   }
 
-  getCitiesForCountry(countryName: string): Observable<City[]> {
+  public getCitiesForCountry(countryName: string): Observable<City[]> {
     return this._httpClient.get<City[]>(this.API_URL + '/cities', {
       params: {
         countryName: countryName,

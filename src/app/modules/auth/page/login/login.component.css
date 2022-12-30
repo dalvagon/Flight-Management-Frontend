@@ -1,5 +1,5 @@
 .login-content {
-    width: 90%;
+    width: 500px;
     margin: auto;
     margin-top: 10px;
     height: fit-content;
@@ -16,27 +16,30 @@
 .login-content form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    width: 100%;
 }
 
-.login-content label {
+.login-content form>* {
     margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-.login-content .p-inputtext,
-.login-content .p-inputtext:focus {
+.login-content input,
+.login-content .p-password {
     border: none;
     outline: none;
     box-shadow: none !important;
-    min-width: 400px;
+    width: 100%;
 }
+
 
 .login-button.p-button,
 .login-button.p-button:hover,
 .login-button.p-button:not(:focus) {
     background-color: #9296F0 !important;
     color: #131C2A !important;
-    border: none;
+    border: none !important;
     width: auto;
     margin: auto;
     margin-top: 20px;

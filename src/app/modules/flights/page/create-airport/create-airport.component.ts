@@ -77,7 +77,7 @@ export class CreateAirportComponent implements OnInit {
     const country: Country = JSON.parse(
       JSON.stringify(this.form.get('country')!.value)
     );
-    const city = JSON.parse(JSON.stringify(this.form.get('city')!.value));
+    const city: City = JSON.parse(JSON.stringify(this.form.get('city')!.value));
 
     if (name && number && street && city && country) {
       const airport = {

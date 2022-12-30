@@ -1,0 +1,113 @@
+.register-content {
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    height: fit-content;
+    background-color: #131C2A75;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color: #EEE8A9;
+    margin-bottom: 50px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper>* {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.register-content form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.register-content form>:not(.wrapper) {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.register-content input,
+.register-content .p-password {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+    width: 100%;
+}
+
+.register-content .p-dropdown,
+.register-content .p-dropdown:not(:focus) {
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.register-content .p-dropdown .p-dropdown-label.p-inputtext {
+    text-indent: 4px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.register-content .p-dropdown .p-dropdown-items-wrapper li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.register-content .p-dropdown .p-dropdown-items-wrapper li .country-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.register-content .p-dropdown .p-dropdown-items-wrapper li .fi {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.register-content .p-dropdown .p-placeholder {
+    font-weight: normal !important;
+}
+
+.register-content form .calendar.p-calendar {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+    width: 100%;
+    margin: auto;
+}
+
+.register-content form .calendar.p-calendar .p-button-icon-only {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: white !important;
+    color: #131C2A !important;
+}
+
+.register-content .register-button.p-button,
+.register-content .register-button.p-button:hover,
+.register-content .register-button.p-button:not(:focus) {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+    border: none !important;
+    outline: none;
+    width: auto;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: none !important;
+}
