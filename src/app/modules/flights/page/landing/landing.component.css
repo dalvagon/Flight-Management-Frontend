@@ -7,7 +7,7 @@
     min-height: 100%;
 }
 
-.content {
+.landing-content {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -16,8 +16,7 @@
     align-items: center;
 }
 
-
-.booking-tab {
+.landing-content .booking-tab {
     background-color: #131C2A75;
     border-radius: 5px;
     padding: 50px;
@@ -29,65 +28,81 @@
     color: #EEE8A9;
 }
 
-.booking-tab p {
+.landing-content .booking-tab p {
     font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.booking-tab i {
+.landing-content .booking-tab i {
     padding: 10px;
     font-size: 35px;
     margin: auto;
     color: #EEE8A9;
 }
 
-.booking-subtab {
+.landing-content .booking-subtab {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
 
-.region-dropdown.p-dropdown,
-.region-dropdown.p-dropdown:not(:focus) {
+.landing-content .p-dropdown,
+.landing-content .p-dropdown:not(:focus) {
     min-width: 450px;
-    background-color: #EEE8A9;
     outline: none;
     box-shadow: none;
-    border: 1px solid #131C2A;
+    border: none !important;
+    margin: 5px;
 }
 
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper {
-    background-color: #EEE8A9;
-}
-
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
+.landing-content .p-dropdown .p-dropdown-items-wrapper li {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item {
+.landing-content .p-dropdown .p-dropdown-items-wrapper li .country-item {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-size: 12px;
 }
 
-.region-dropdown.p-dropdown .p-dropdown-items-wrapper li .fi {
+.landing-content .p-dropdown .p-dropdown-items-wrapper li .fi {
     width: 30px;
     height: 30px;
     margin-right: 20px;
 }
 
-.booking-tab .bi {
+.landing-content .booking-tab .bi {
     color: #EEE8A9;
     transform: rotate(180deg);
 }
 
-.p-button,
-.p-button:hover,
-.p-button:not(:focus) {
+.landing-content .calendar.p-calendar {
+    width: 450px;
+}
+
+.landing-content .calendar input {
+    border: none !important;
+    outline: none;
+    box-shadow: none !important;
+    margin: auto;
+}
+
+.landing-content .calendar.p-calendar .p-button-icon-only {
+    border: none !important;
+    outline: none;
+    box-shadow: none;
+    background-color: white !important;
+    color: #131C2A !important;
+}
+
+.landing-content .submit-button.p-button,
+.landing-content .submit-button.p-button:hover,
+.landing-content .submit-button.p-button:not(:focus) {
     background-color: #9296F0 !important;
     color: #131C2A !important;
     outline: none;
@@ -98,13 +113,12 @@
     box-shadow: none;
 }
 
-.p-button .bi {
+.landing-content .submit-button.p-button .bi {
     color: #131C2A;
     transform: none;
 }
 
-
-.cards {
+.landing-content .cards {
     width: 90%;
     height: 800px;
     display: grid;
@@ -116,11 +130,11 @@
     transition: all ease-in-out 200ms;
 }
 
-.cards>div:hover {
+.landing-content .cards>div:hover {
     opacity: 0.8;
 }
 
-.cell1 {
+.landing-content .cell1 {
     grid-area: 1 / 1 / span 4 / span 4;
     background: url("src/assets/airplane8.jpg");
     background-size: cover;
@@ -131,7 +145,7 @@
     padding: 120px;
 }
 
-.cell2 {
+.landing-content .cell2 {
     grid-area: 1 / 5 / span 2 / span 2;
     background-color: #EF8041;
     color: #EEE8A9;
@@ -142,11 +156,11 @@
     justify-content: center;
 }
 
-.cell2 p {
+.landing-content .cell2 p {
     font-size: 15px;
 }
 
-.cell3 {
+.landing-content .cell3 {
     grid-area: 3 / 5 / span 2 / span 2;
     background-color: #3F8D8B;
     color: #EEE8A9;
@@ -157,23 +171,23 @@
     justify-content: center;
 }
 
-.cell3 p {
+.landing-content .cell3 p {
     font-size: 15px;
 }
 
-.cell4 {
+.landing-content .cell4 {
     grid-area: 1 / 7 / span 4 / span 2;
     background: url("src/assets/airplane5.jpg");
     background-size: cover;
 }
 
-.cell5 {
+.landing-content .cell5 {
     grid-area: 1 / 9 / span 4 / span 2;
     background: url("src/assets/airplane4.jpg");
     background-size: cover;
 }
 
-.cell6 {
+.landing-content .cell6 {
     grid-area: 5 / 1 / span 2 / span 6;
     background-color: #FF646F;
     color: #EEE8A9;
@@ -185,11 +199,11 @@
     font-size: 25px;
 }
 
-.cell6 i {
+.landing-content .cell6 i {
     margin-right: 10px;
 }
 
-.cell7 {
+.landing-content .cell7 {
     grid-area: 7 / 1 / span 2 / span 3;
     background: url("src/assets/airplane3.jpg");
     background-size: cover;
@@ -201,7 +215,7 @@
     font-size: 25px;
 }
 
-.cell8 {
+.landing-content .cell8 {
     grid-area: 7 / 4 / span 2 / span 3;
     background: url("src/assets/airplane2.jpg");
     background-size: cover;
@@ -213,7 +227,7 @@
     font-size: 25px;
 }
 
-.cell9 {
+.landing-content .cell9 {
     grid-area: 5 / 7 / span 4 / span 4;
     background: url("src/assets/airplane1.jpg");
     background-size: cover;
@@ -226,7 +240,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .booking-subtab {
+    .landing-content .booking-subtab {
         display: flex;
         flex-direction: column;
         align-items: center;

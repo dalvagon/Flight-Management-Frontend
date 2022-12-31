@@ -17,12 +17,14 @@ export class FlightService {
 
   getFlights(
     departureCity: string,
-    destinationCity: string
+    destinationCity: string,
+    departureDate: Date
   ): Observable<Flight[]> {
     return this._httpClient.get<Flight[]>(this.API_URL + '/flights', {
       params: {
         departureCity: departureCity,
         destinationCity: destinationCity,
+        departureDate: departureDate.toString(),
       },
     });
   }

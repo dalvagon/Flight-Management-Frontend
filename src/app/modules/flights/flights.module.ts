@@ -20,6 +20,7 @@ import { ListboxModule } from 'primeng/listbox';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { TimelineModule } from 'primeng/timeline';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
@@ -48,6 +49,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     CalendarModule,
     InputTextModule,
     InputNumberModule,
+    TimelineModule,
   ],
   providers: [
     {

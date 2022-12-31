@@ -13,6 +13,7 @@ export class FlightsComponent implements OnInit {
   flights: Flight[] = [];
   departureCity?: string;
   destinationCity?: string;
+  departureDate?: Date;
 
   constructor(
     private flightService: FlightService,
@@ -23,11 +24,16 @@ export class FlightsComponent implements OnInit {
     this.route.queryParams.subscribe((params) => {
       this.departureCity = params['departureCity'];
       this.destinationCity = params['destinationCity'];
+      this.departureDate = params['departureDate'];
     });
 
-    if (this.departureCity && this.destinationCity) {
+    if (this.departureCity && this.destinationCity && this.departureDate) {
       this.flightService
-        .getFlights(this.departureCity, this.destinationCity)
+        .getFlights(
+          this.departureCity,
+          this.destinationCity,
+          this.departureDate
+        )
         .pipe(first())
         .subscribe((data) =>
           data.forEach((flight) => {

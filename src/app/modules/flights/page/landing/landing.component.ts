@@ -21,6 +21,7 @@ export class LandingComponent implements OnInit {
   selectedDestinationCity?: City;
   departureCitySelected: boolean = false;
   destinationCitySelected: boolean = false;
+  departureDate?: Date;
 
   constructor(private regionService: RegionService, private router: Router) {}
 
@@ -73,11 +74,18 @@ export class LandingComponent implements OnInit {
   }
 
   submit() {
-    this.router.navigate(['/flights'], {
-      queryParams: {
-        departureCity: this.selectedDepartureCity?.name,
-        destinationCity: this.selectedDestinationCity?.name,
-      },
-    });
+    if (
+      this.selectedDepartureCity &&
+      this.selectedDestinationCity &&
+      this.departureDate
+    ) {
+      this.router.navigate(['/flights'], {
+        queryParams: {
+          departureCity: this.selectedDepartureCity?.name,
+          destinationCity: this.selectedDestinationCity?.name,
+          departureDate: new Date(this.departureDate!).toLocaleString(),
+        },
+      });
+    }
   }
 }

@@ -57,7 +57,7 @@
 .register-content .p-dropdown .p-dropdown-label.p-inputtext {
     text-indent: 4px;
     text-transform: none;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .register-content .p-dropdown .p-dropdown-items-wrapper li {

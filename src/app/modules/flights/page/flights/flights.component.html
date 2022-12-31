@@ -1,23 +1,42 @@
-<div class="content">
+<div class="flights-content">
     <div [hidden]="departureCity && destinationCity" class="exception">
         Search for flights <a [routerLink]="['/']">here</a>
     </div>
-    <ng-container *ngFor="let flight of flights">
-        <div class="flight" [routerLink]="['/flights/', flight.id]">
-            <div class="cities">
-                <p>{{flight.departureAirport.address.city.name}} -
-                    {{flight.destinationAirport.address.city.name}}</p>
-            </div>
-            <div class="info">
-                <p>Leaves {{flight.departureDate | date: 'dd.MM.yyyy, HH:mm'}} -
-                    Arrives {{flight.arrivalDate | date: 'dd.MM.yyyy, HH:mm'}}</p>
-                <p>Seats left: {{flight.passengerCapacity - flight.passengers.length}}</p>
-            </div>
-        </div>
-    </ng-container>
+
+    <p-timeline [value]="flights" layout="horizontal">
+        <ng-template pTemplate="content" let-flight>
+            {{flight.departureAirport.address.city.name}}
+        </ng-template>
+        <ng-template pTemplate="opposite" let-flight>
+            {{flight.departureDate | date: 'dd.MM.yyyy, HH:mm'}}
+        </ng-template>
+    </p-timeline>
+
+    <!-- <p-table [value]="flights" styleClass="table" styleClass="p-datatable-striped">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Departure</th>
+                    <th>Destination</th>
+                    <th pSortableColumn="departureDate">Departure date<p-sortIcon field="departureDate"></p-sortIcon>
+                    </th>
+                    <th>Arrival date</th>
+                    <th>Seats left</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-flight>
+                <tr>
+                    <td>{{flight.departureAirport.address.city.name}}</td>
+                    <td>{{flight.destinationAirport.address.city.name}}</td>
+                    <td>{{flight.departureDate | date: 'dd.MM.yyyy, HH:mm'}}</td>
+                    <td>{{flight.arrivalDate | date: 'dd.MM.yyyy, HH:mm'}}</td>
+                    <td>{{flight.passengerCapacity - flight.passengers.length}}</td>
+                    <button pButton label="Book"></button>
+                </tr>
+            </ng-template>
+        </p-table> -->
     <div [hidden]="flights.length > 0 || !departureCity || !destinationCity" class="exception">
         We are sorry. There are currently no
         flights
-        from <em>{{departureCity}}</em> to <em>{{destinationCity}}</em>
+        from <em>{{departureCity}}</em> to <em>{{destinationCity}}</em> at this date
     </div>
 </div>

@@ -5,7 +5,7 @@
     <a class="link" [routerLink]="['/auth/register']">Sign Un</a>
   </div>
   <ng-template #loggedId>
-    <p>{{name}} {{surname}}</p>
+    <p>{{surname}} {{name}}</p>
     <button pButton label="Logout" (click)="logout()"></button>
   </ng-template>
 </nav>

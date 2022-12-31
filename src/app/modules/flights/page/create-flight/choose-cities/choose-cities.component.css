@@ -29,7 +29,6 @@
 .choose-cities-content .region-dropdown.p-dropdown,
 .choose-cities-content .region-dropdown.p-dropdown:not(:focus) {
     min-width: 450px;
-    background-color: #EEE8A9;
     outline: none;
     box-shadow: none;
     border: none;
@@ -38,10 +37,6 @@
     align-items: center;
     margin-bottom: 15px;
     text-indent: 4px;
-}
-
-.choose-cities-content .p-dropdown-items-wrapper {
-    background-color: #EEE8A9;
 }
 
 .choose-cities-content .region-dropdown.p-dropdown .p-dropdown-label.p-inputtext {

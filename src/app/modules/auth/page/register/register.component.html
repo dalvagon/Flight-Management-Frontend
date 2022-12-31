@@ -17,11 +17,7 @@
             [hideOnDateTimeSelect]="true" [showIcon]="true" placeholder="Date of birth">
         </p-calendar>
 
-        <p-dropdown [options]="genders" formControlName="gender" optionLabel="name" placeholder="Gender">
-            <ng-template let-gender pTemplate="item">
-                {{gender}}
-            </ng-template>
-        </p-dropdown>
+        <p-dropdown [options]="genders" placeholder="Gender" optionLabel="value" formControlName="gender"></p-dropdown>
 
         <div class="wrapper">
             <span class="p-input-icon-right">
@@ -70,6 +66,6 @@
 
         <p-password formControlName="password" [toggleMask]="true" [feedback]="true" placeholder="Password">
         </p-password>
-        <button type="submit" pButton label="Log In" class="register-button" [loading]="isLoading"></button>
+        <button type="submit" pButton label="Register" class="register-button" [loading]="isLoading"></button>
     </form>
 </div>

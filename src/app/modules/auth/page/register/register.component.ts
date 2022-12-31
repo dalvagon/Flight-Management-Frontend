@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   isLoading: boolean = false;
   countries: Country[] = [];
   cities: City[] = [];
-  genders: string[] = [];
+  genders: any[] = [];
   form = this.fb.group({
     name: ['', [Validators.required]],
     surname: ['', [Validators.required]],
@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
     private authService: AuthService,
     private router: Router
   ) {
-    this.genders = ['Male', 'Female'];
+    this.genders = [{ value: 'Male' }, { value: 'Female' }];
   }
 
   ngOnInit(): void {
@@ -71,7 +71,7 @@ export class RegisterComponent implements OnInit {
     const name = this.form.get('name')?.value;
     const surname = this.form.get('surname')?.value;
     const dateOfBirth = this.form.get('dateOfBirth')?.value;
-    const gender = this.form.get('gender')?.value;
+    const gender = JSON.parse(JSON.stringify(this.form.get('gender')?.value));
     const number = this.form.get('number')?.value;
     const street = this.form.get('street')?.value;
     const country: Country = JSON.parse(
@@ -86,7 +86,6 @@ export class RegisterComponent implements OnInit {
       surname &&
       dateOfBirth &&
       gender &&
-      street &&
       number &&
       street &&
       city &&
@@ -98,11 +97,13 @@ export class RegisterComponent implements OnInit {
         name: name,
         surname: surname,
         dateOfBirth: new Date(dateOfBirth!).toLocaleString(),
-        gender: gender,
-        number: number,
-        street: street,
-        cityId: city.id,
-        country: country.id,
+        gender: gender.value,
+        address: {
+          number: number,
+          street: street,
+          cityId: city.id,
+          countryId: country.id,
+        },
         email: email,
         password: password,
       };
@@ -110,7 +111,10 @@ export class RegisterComponent implements OnInit {
       this.authService
         .register(credentials)
         .pipe(first())
-        .subscribe((res) => console.log(res));
+        .subscribe((res) => {
+          this.isLoading = false;
+          this.router.navigate(['auth/login']);
+        });
     }
   }
 }

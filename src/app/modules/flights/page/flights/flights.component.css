@@ -1,4 +1,4 @@
-.content {
+.flights-content {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -9,58 +9,10 @@
     color: #FFF3FA;
 }
 
-.flight {
-    width: 80%;
-    margin-top: 40px;
-    background-color: #131C2A;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.flights-content p-table {
+    margin-top: 50px !important;
 }
 
-.flight:hover {
-    cursor: pointer;
-}
-
-.cities {
-    width: 30%;
-    padding: 30px;
-}
-
-.info {
-    background-color: #000;
-    width: 80%;
-    padding: 30px;
-    color: #FFF3FA;
-    transition: all ease-in-out 200ms;
-    font-size: 17px;
-    letter-spacing: 1px;
-}
-
-.info:hover {
-    transform: rotate(1deg);
-}
-
-.exception {
+.flights-content .exception {
     margin: auto;
-}
-
-
-@media only screen and (max-width: 900px) {
-    .flight {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cities {
-        width: 100%;
-        padding: 30px;
-    }
-
-    .info {
-        width: 100%;
-        padding: 30px;
-    }
-
 }

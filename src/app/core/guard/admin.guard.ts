@@ -22,8 +22,8 @@ export class AdminGuard implements CanActivate {
     let role: string = '';
 
     this.userStore
-      .getNameFromStore()
-      .subscribe((val) => (role = val || this.authService.getNameFromToken()));
+      .getRoleFromStore()
+      .subscribe((val) => (role = val || this.authService.getRoleFromToken()));
 
     if (role === 'Admin') {
       return true;
