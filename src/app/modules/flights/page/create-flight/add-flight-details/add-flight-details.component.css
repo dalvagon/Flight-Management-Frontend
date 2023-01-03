@@ -13,26 +13,26 @@
     margin-bottom: 50px;
 }
 
-.add-flight-details-content .form {
+.add-flight-details-content form {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.add-flight-details-content .form label {
+.add-flight-details-content form label {
     margin-top: 20px;
 }
 
-.add-flight-details-content .form .p-inputtext,
-.add-flight-details-content .form .p-inputtext:focus {
+.add-flight-details-content form .p-inputtext,
+.add-flight-details-content form .p-inputtext:focus {
     border: none;
     outline: none;
     box-shadow: none !important;
     min-width: 400px;
 }
 
-.add-flight-details-content .form .p-inputnumber .increment-button,
-.add-flight-details-content .form .p-inputnumber .decrement-button {
+.add-flight-details-content form .p-inputnumber .increment-button,
+.add-flight-details-content form .p-inputnumber .decrement-button {
     background-color: #9296F0 !important;
     color: #131C2A !important;
     border: none;
@@ -40,7 +40,7 @@
     margin: none;
 }
 
-.add-flight-details-content .form .calendar.p-calendar input {
+.add-flight-details-content form .calendar.p-calendar input {
     border: none;
     outline: none;
     box-shadow: none !important;
@@ -48,7 +48,7 @@
     margin: auto;
 }
 
-.add-flight-details-content .form .calendar.p-calendar .p-button-icon-only {
+.add-flight-details-content form .calendar.p-calendar .p-button-icon-only {
     border: none;
     outline: none;
     box-shadow: none;
@@ -56,7 +56,7 @@
     color: #131C2A !important;
 }
 
-.add-flight-details-content .form .calendar.p-calendar .p-button-icon-only:hover {
+.add-flight-details-content form .calendar.p-calendar .p-button-icon-only:hover {
     background-color: #9296F0 !important;
     color: #EEE8A9 !important;
 }

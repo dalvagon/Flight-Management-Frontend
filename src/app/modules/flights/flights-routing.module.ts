@@ -1,3 +1,4 @@
+import { BookFlightComponent } from './page/book-flight/book-flight.component';
 import { AuthGuard } from './../../core/guard/auth.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -27,6 +28,11 @@ const routes: Routes = [
       {
         path: 'flights',
         component: FlightsComponent,
+        canActivate: [AuthGuard],
+      },
+      {
+        path: 'book-flight',
+        component: BookFlightComponent,
         canActivate: [AuthGuard],
       },
       {

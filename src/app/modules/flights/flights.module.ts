@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FlightsRoutingModule } from './flights-routing.module';
 import { FlightsComponent } from './page/flights/flights.component';
 import { LandingComponent } from './page/landing/landing.component';
+import { BookFlightComponent } from './page/book-flight/book-flight.component';
 import { ButtonModule } from 'primeng/button';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { FlightDetailsComponent } from './page/flight-details/flight-details.component';
@@ -20,7 +21,8 @@ import { ListboxModule } from 'primeng/listbox';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
-import { TimelineModule } from 'primeng/timeline';
+import { FieldsetModule } from 'primeng/fieldset';
+import { MultiSelectModule } from 'primeng/multiselect';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
@@ -34,6 +36,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     ChooseCitiesComponent,
     ChooseAirportsComponent,
     AddFlightDetailsComponent,
+    BookFlightComponent,
   ],
   imports: [
     CommonModule,
@@ -49,7 +52,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     CalendarModule,
     InputTextModule,
     InputNumberModule,
-    TimelineModule,
+    FieldsetModule,
+    MultiSelectModule,
   ],
   providers: [
     {

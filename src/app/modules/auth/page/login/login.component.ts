@@ -43,6 +43,11 @@ export class LoginComponent implements OnInit {
           this.isLoading = false;
           this.authService.storeToken(res.token);
           let payload = this.authService.decodeToken();
+          this.userStoreService.setIdForStore(
+            payload[
+              'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'
+            ]
+          );
           this.userStoreService.setNameForStore(
             payload[
               'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'

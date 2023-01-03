@@ -10,7 +10,6 @@ import { City } from '../schema/city';
 })
 export class AirportService {
   private API_URL = environment.API_URL;
-
   departureCity?: City;
   destinationCity?: City;
 

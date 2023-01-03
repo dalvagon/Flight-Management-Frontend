@@ -1,5 +1,5 @@
 <div class="add-flight-details-content">
-    <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+    <form [formGroup]="form" (ngSubmit)="submit()">
         <label>Selecte the departure date:</label>
         <p-calendar formControlName="departureDate" dateFormat="dd-mm-yy" styleClass="calendar"
             [minDate]="departureMinDate" [showTime]="true" [hideOnDateTimeSelect]="false" [showIcon]="true"

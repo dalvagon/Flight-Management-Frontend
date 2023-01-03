@@ -87,4 +87,12 @@ export class AuthService {
       ];
     }
   }
+
+  public getIdFromToken() {
+    if (this.userPayload) {
+      return this.userPayload[
+        'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'
+      ];
+    }
+  }
 }
