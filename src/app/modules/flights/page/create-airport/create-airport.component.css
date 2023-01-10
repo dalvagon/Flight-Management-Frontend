@@ -31,43 +31,29 @@
     justify-content: center;
 }
 
-.create-airport-dialog .p-dialog-content form input {
-    width: 100%;
-    border: none;
-    background-color: #EEE8A9;
-    outline: none;
-    height: 40px;
-    font-size: 15px;
-    text-indent: 4px;
-    border-radius: 4px;
+.create-airport-dialog .p-dialog-content form>* {
     margin-bottom: 15px;
+}
+
+.create-airport-dialog .p-dialog-content form input {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+    width: 100%;
 }
 
 .create-airport-dialog .region-dropdown.p-dropdown,
 .create-airport-dialog .region-dropdown.p-dropdown:not(:focus) {
     width: 100%;
-    background-color: #EEE8A9;
     outline: none;
     box-shadow: none;
     border: none;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    text-indent: 4px;
-}
-
-.create-airport-dialog .p-dropdown-items-wrapper {
-    background-color: #EEE8A9;
 }
 
 .create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-label.p-inputtext {
     text-indent: 4px;
     text-transform: none;
-    font-weight: bold;
-    padding: 0;
-    font-family: 'Catamaran', sans-serif;
-
+    font-weight: normal;
 }
 
 .create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
@@ -89,9 +75,9 @@
     margin-right: 20px;
 }
 
-.create-airport-dialog .p-button,
-.create-airport-dialog .p-button:hover,
-.create-airport-dialog .p-button:not(:focus) {
+.create-airport-dialog .create-airport-button.p-button,
+.create-airport-dialog .create-airport-button.p-button:hover,
+.create-airport-dialog .create-airport-button.p-button:not(:focus) {
     background-color: #9296F0 !important;
     color: #131C2A !important;
     border: 1px solid #131C2A !important;

@@ -54,18 +54,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .book-flight-content .baggage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #9296F0;
+    border: 1px solid #9296F0;
     padding: 10px;
-    border-radius: 5px;
     min-width: 400px;
     max-width: 400px;
+    margin-top: 5px;
 }
 
 .book-flight-content .submit-button.p-button,

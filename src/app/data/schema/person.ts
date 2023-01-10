@@ -1,10 +1,10 @@
 import { Address } from './address';
 
 export interface Person {
-  id: number;
+  id: string;
   name: string;
   surname: string;
   dateOfBirth: Date;
-  gender: number;
+  gender: string;
   address: Address;
 }

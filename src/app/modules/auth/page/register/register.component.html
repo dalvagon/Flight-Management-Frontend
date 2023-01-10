@@ -67,5 +67,6 @@
         <p-password formControlName="password" [toggleMask]="true" [feedback]="true" placeholder="Password">
         </p-password>
         <button type="submit" pButton label="Register" class="register-button" [loading]="isLoading"></button>
+        <small>*Or log in <a [routerLink]="['/auth/login']">here</a></small>
     </form>
 </div>

@@ -1,22 +1,27 @@
-<div class="content">
-    <p class="title">Flight Details:</p>
-    <div class="details">
-        <p>{{flight?.departureAirport?.address?.city?.name}} -
-            {{flight?.destinationAirport?.address?.city?.name}}</p>
-        <p>Leaves {{flight?.departureDate | date: 'dd.MM.yyyy, HH:mm'}}</p>
-        <p>Arrives {{flight?.arrivalDate | date: 'dd.MM.yyyy, HH:mm'}}</p>
-        <p>Maximum weight per baggage: {{flight?.maxWeightPerBaggage}}</p>
-        <p>Maximum baggage weight per person: {{flight?.maxBaggageWeightPerPassenger}}</p>
-        <p>Maximum baggage dimensions: {{flight?.maxBaggageWidth}} - {{flight?.maxBaggageHeight}}
-            -
-            {{flight?.maxBaggageLength}}</p>
-        <p>Maximum weight per baggage: {{flight?.maxWeightPerBaggage}}</p>
+<div class="flight-details-content">
+    <div class="flight">
+        <div class="info">
+            {{flight?.departureAirport?.address?.city?.name}} -
+            {{flight?.destinationAirport?.address?.city?.name}}
+        </div>
+        <div class="info">
+            {{flight?.departureDate | date: 'dd.MM.yyyy, HH:mm'}} -
+            {{flight?.arrivalDate | date: 'dd.MM.yyyy, HH:mm'}}
+        </div>
+        <div class="info">
+            Seats left: {{seatsLeft$ | async}}
+        </div>
+        <div class="info">Maximum weight per baggage: {{flight?.maxWeightPerBaggage}} kg</div>
+        <div class="info">Maximum baggage weight per person: {{flight?.maxBaggageWeightPerPassenger}} kg</div>
+        <div class="info">Maximum baggage dimensions: {{flight?.maxBaggageWidth}} cm - {{flight?.maxBaggageHeight}} cm
+            - {{flight?.maxBaggageLength}} cm</div>
+        <div class="info">Maximum weight per baggage: {{flight?.maxWeightPerBaggage}} kg</div>
     </div>
     <p class="title">Passengers:</p>
     <div class="passengers">
         <ng-container *ngFor="let passenger of flight?.passengers">
-            <div class="passenger">
-                {{passenger.person.name}} {{passenger.person.surname}}
+            <div class="flight">
+                <div class="info">{{passenger.person.name}} {{passenger.person.surname}}</div>
                 <div class="baggages">
                     <p>Baggages:</p>
                     <ng-container *ngFor="let baggage of passenger.baggages">

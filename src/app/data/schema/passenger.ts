@@ -1,3 +1,4 @@
+import { Allergy } from './allergy';
 import { Baggage } from './baggage';
 import { Flight } from './flight';
 import { Person } from './person';
@@ -7,6 +8,6 @@ export interface Passenger {
   person: Person;
   flight: Flight;
   weight: 75;
-  allergies: [];
+  allergies: Allergy[];
   baggages: Baggage[];
 }

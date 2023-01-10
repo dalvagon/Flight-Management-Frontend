@@ -98,6 +98,7 @@ export class AddFlightDetailsComponent implements OnInit {
             queryParams: {
               departureCity: this.departureAirport?.address.city.name,
               destinationCity: this.destinationAirport?.address.city.name,
+              departureDate: new Date(departureDate).toLocaleString(),
             },
           });
         });

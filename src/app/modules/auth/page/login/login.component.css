@@ -33,7 +33,6 @@
     width: 100%;
 }
 
-
 .login-button.p-button,
 .login-button.p-button:hover,
 .login-button.p-button:not(:focus) {
@@ -44,4 +43,13 @@
     margin: auto;
     margin-top: 20px;
     box-shadow: none !important;
+}
+
+.login-content a {
+    color: #9296F0;
+}
+
+.login-content a:hover,
+.login-content a:active {
+    color: #131C2A;
 }

@@ -1,13 +1,18 @@
 <p-dialog styleClass="create-airport-dialog" header="Create airport" [(visible)]="display" (onHide)="close()"
     [resizable]="false" [draggable]="false" [modal]="true" [contentStyle]="{'overflow':'visible'}">
     <form [formGroup]="form" (ngSubmit)="submit()">
-        <label>Name</label>
-        <input type="text" formControlName="name" placeholder="Name">
-        <label>Number</label>
-        <input type="text" formControlName="number" placeholder="Number">
-        <label>Street</label>
-        <input type="text" formControlName="street" placeholder="Street">
-        <label>Country</label>
+        <span class="p-input-icon-right">
+            <i class="pi pi-pencil"></i>
+            <input type="text" formControlName="name" placeholder="Name" pInputText>
+        </span>
+        <span class="p-input-icon-right">
+            <i class="pi pi-map-marker"></i>
+            <input type="text" formControlName="number" placeholder="Number" pInputText>
+        </span>
+        <span class="p-input-icon-right">
+            <i class="pi pi-map-marker"></i>
+            <input type="text" formControlName="street" placeholder="Street" pInputText>
+        </span>
         <p-dropdown styleClass="region-dropdown" [options]="countries" formControlName="country" optionLabel="name"
             placeholder="Country" (onChange)="onCountrySelected($event)">
             <ng-template let-country pTemplate="selectedItem">
@@ -23,7 +28,7 @@
                 </div>
             </ng-template>
         </p-dropdown>
-        <label>City</label>
+
         <p-dropdown styleClass="region-dropdown" [options]="cities" formControlName="city" optionLabel="name"
             placeholder="City">
             <ng-template let-city pTemplate="selectedItem">
@@ -37,6 +42,6 @@
                 </div>
             </ng-template>
         </p-dropdown>
-        <button type="submit" pButton label="Create"></button>
+        <button type="submit" pButton label="Create" class="create-airport-button"></button>
     </form>
 </p-dialog>

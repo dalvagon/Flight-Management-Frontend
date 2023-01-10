@@ -1,6 +1,6 @@
 <div class="choose-cities-content">
     <div>
-        <label>Departure country:</label>
+        <label>From:</label>
         <div class="booking-subtab">
             <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedDepartureCountry"
                 optionLabel="name" placeholder="Select departure country"
@@ -19,7 +19,6 @@
                 </ng-template>
             </p-dropdown>
 
-            <label>Departure city:</label>
             <p-dropdown styleClass="region-dropdown" [options]="departureCities" [(ngModel)]="selectedDepartureCity"
                 optionLabel="name" placeholder="Select departure city" (onChange)="onDepartureCitySelected($event)">
                 <ng-template let-city pTemplate="selectedItem">
@@ -37,7 +36,7 @@
         <ng-container *ngIf="departureCitySelected">
             <hr>
             <div class="booking-subtab">
-                <label>Destination country:</label>
+                <label>To:</label>
                 <p-dropdown styleClass="region-dropdown" [options]="countries" [(ngModel)]="selectedDestinationCountry"
                     optionLabel="name" placeholder="Select destination country"
                     (onChange)="onDestinationCountrySelected($event)">
@@ -55,7 +54,6 @@
                     </ng-template>
                 </p-dropdown>
 
-                <label>Destination city:</label>
                 <p-dropdown styleClass="region-dropdown" [options]="destinationCities"
                     [(ngModel)]="selectedDestinationCity" optionLabel="name" placeholder="Select destination city"
                     (onChange)="onDestinationCitySelected($event)">
