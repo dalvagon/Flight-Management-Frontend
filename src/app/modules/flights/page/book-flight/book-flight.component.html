@@ -1,0 +1,58 @@
+<div class="book-flight-content">
+    <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+        <label>Select your weight:</label>
+        <p-inputNumber [showButtons]="true" decrementButtonClass="decrement-button"
+            incrementButtonClass="increment-button" formControlName="weight" suffix="kg" mode="decimal"
+            [minFractionDigits]="2" [min]="0" [step]="0.25">
+        </p-inputNumber>
+
+        <label>Select your allergies:</label>
+        <p-multiSelect [options]="allergies" formControlName="selectedAllergies" defaultLabel="Select an allergy"
+            optionLabel="name" display="chip">
+            <ng-template let-allergy pTemplate="item">
+                <div>
+                    {{allergy.name}}
+                </div>
+            </ng-template>
+        </p-multiSelect>
+
+        <p *ngIf="baggages.length > 0">Your baggages</p>
+        <div class="baggages" *ngFor="let baggage of baggages">
+            <div class="baggage">
+                <span>Weight: {{baggage.weight}}</span>
+                <span>Width: {{baggage.width}}</span>
+                <span>Height: {{baggage.height}}</span>
+                <span>Length: {{baggage.length}}</span>
+            </div>
+        </div>
+
+        <p>Add baggages:</p>
+        <label>Select the baggage weight</label>
+        <p-inputNumber [showButtons]="true" formControlName="baggageWeight" decrementButtonClass="decrement-button"
+            incrementButtonClass="increment-button" suffix="kg" mode="decimal" [minFractionDigits]="2" [min]="0"
+            [step]="0.25">
+        </p-inputNumber>
+
+        <label>Select the baggage width</label>
+        <p-inputNumber [showButtons]="true" formControlName="baggageWidth" decrementButtonClass="decrement-button"
+            incrementButtonClass="increment-button" suffix="cm" mode="decimal" [minFractionDigits]="2" [min]="0"
+            [step]="0.25">
+        </p-inputNumber>
+
+        <label>Select the baggage length</label>
+        <p-inputNumber [showButtons]="true" formControlName="baggageLength" decrementButtonClass="decrement-button"
+            incrementButtonClass="increment-button" suffix="cm" mode="decimal" [minFractionDigits]="2" [min]="0"
+            [step]="0.25">
+        </p-inputNumber>
+
+        <label>Select the baggage height</label>
+        <p-inputNumber [showButtons]="true" formControlName="baggageHeight" decrementButtonClass="decrement-button"
+            incrementButtonClass="increment-button" suffix="cm" mode="decimal" [minFractionDigits]="2" [min]="0"
+            [step]="0.25">
+        </p-inputNumber>
+
+        <button type="button" pButton label="Add baggage" class="submit-button" (click)="addBaggage()"></button>
+
+        <button type="submit" pButton label="Book" class="submit-button" [loading]="isLoading"></button>
+    </form>
+</div>

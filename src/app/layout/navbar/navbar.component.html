@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <div class="nav-title" [routerLink]="['']">Pravel</div>
+  <div *ngIf="!loggedIn; else loggedId" class="links">
+    <a class="link" [routerLink]="['/auth/login']">Log In</a>/
+    <a class="link" [routerLink]="['/auth/register']">Sign Un</a>
+  </div>
+  <ng-template #loggedId>
+    <p>{{surname}} {{name}}</p>
+    <button pButton label="Logout" (click)="logout()"></button>
+  </ng-template>
+</nav>

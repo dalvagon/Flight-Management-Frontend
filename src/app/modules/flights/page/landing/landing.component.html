@@ -1,0 +1,104 @@
+<video autoplay [muted]="'muted'" loop id="landingBackgroundVideo">
+    <source src="../assets/landingbackground.mp4" type="video/mp4" />
+</video>
+
+
+<div class="landing-content">
+    <div class="booking-tab">
+        <p>From:</p>
+        <div class="booking-subtab">
+            <p-dropdown [options]="countries" [(ngModel)]="selectedDepartureCountry" optionLabel="name"
+                placeholder="Select departure country" (onChange)="onDepartureCountrySelected($event)">
+                <ng-template let-country pTemplate="selectedItem">
+                    <div class="country-item">
+                        <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                        {{country.name}}
+                    </div>
+                </ng-template>
+                <ng-template let-country pTemplate="item">
+                    <div class="country-item">
+                        <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                        {{country.name}}
+                    </div>
+                </ng-template>
+            </p-dropdown>
+
+            <p-dropdown [options]="departureCities" [(ngModel)]="selectedDepartureCity" optionLabel="name"
+                placeholder="Select departure city" (onChange)="onDepartureCitySelected($event)">
+                <ng-template let-city pTemplate="selectedItem">
+                    <div class="city-item">
+                        {{city.name}}
+                    </div>
+                </ng-template>
+                <ng-template let-city pTemplate="item">
+                    <div class="country-item">
+                        {{city.name}}
+                    </div>
+                </ng-template>
+            </p-dropdown>
+        </div>
+        <ng-container *ngIf="departureCitySelected">
+            <i class="bi bi-airplane"></i>
+            <p>To:</p>
+            <div class="booking-subtab">
+                <p-dropdown [options]="countries" [(ngModel)]="selectedDestinationCountry" optionLabel="name"
+                    placeholder="Select destination country" (onChange)="onDestinationCountrySelected($event)">
+                    <ng-template let-country pTemplate="selectedItem">
+                        <div class="country-item">
+                            <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                            {{country.name}}
+                        </div>
+                    </ng-template>
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                            {{country.name}}
+                        </div>
+                    </ng-template>
+                    <ng-template p-template="loader">
+                        <p>Loading Countries</p>
+                    </ng-template>
+                </p-dropdown>
+
+                <p-dropdown [options]="destinationCities" [(ngModel)]="selectedDestinationCity" optionLabel="name"
+                    placeholder="Select destination city" (onChange)="onDestinationCitySelected($event)">
+                    <ng-template let-city pTemplate="selectedItem">
+                        <div class="city-item">
+                            {{city.name}}
+                        </div>
+                    </ng-template>
+                    <ng-template let-city pTemplate="item">
+                        <div class="country-item">
+                            {{city.name}}
+                        </div>
+                    </ng-template>
+                </p-dropdown>
+            </div>
+            <p>When:</p>
+            <div class="booking-subtab">
+                <p-calendar [(ngModel)]="departureDate" dateFormat="dd-mm-yy" [hideOnDateTimeSelect]="true"
+                    [showIcon]="true" styleClass="calendar" placeholder="Departure date"></p-calendar>
+            </div>
+            <button type="button" (click)="submit()" pButton icon="bi bi-search" label="Search for flights"
+                class="submit-button" *ngIf="destinationCitySelected"></button>
+        </ng-container>
+    </div>
+    <div class="cards">
+        <div class="cell1">
+            Book your flights with us
+        </div>
+        <div class="cell2"><i class="bi bi-cup-hot-fill"></i>Luxury<p>Enjoy a luxurious holiday</p>
+        </div>
+        <div class="cell3"><i class="bi bi-bank"></i>Culture<p>Visit local attractions</p>
+        </div>
+        <div class="cell4"></div>
+        <div class="cell5"></div>
+        <div class="cell6">
+            <i class="bi bi-globe-americas"></i>
+            Discover places for perfect getaways
+        </div>
+        <div class="cell7"></div>
+        <div class="cell8"></div>
+        <div class="cell9"></div>
+    </div>
+</div>

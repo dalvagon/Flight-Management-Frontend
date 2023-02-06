@@ -1,0 +1,31 @@
+<div class="flights-content">
+    <div [hidden]="departureCity && destinationCity" class="exception">
+        Search for flights <a [routerLink]="['/']">here</a>
+    </div>
+
+    <ng-container *ngFor="let flight of flights">
+        <div class="flight">
+            <div class="info">
+                {{flight.departureAirport.address.city.name}} -
+                {{flight.destinationAirport.address.city.name}}
+            </div>
+            <div class="info">
+                {{flight.departureDate | date: 'dd.MM.yyyy, HH:mm'}} -
+                {{flight.arrivalDate | date: 'dd.MM.yyyy, HH:mm'}}
+            </div>
+            <div class="info">
+                Seats left: {{flight.passengerCapacity - flight.passengers.length}}
+            </div>
+            <button pButton *ngIf="role=='User'" label="Book flight"
+                [disabled]="flight.passengerCapacity - flight.passengers.length <= 0"
+                (click)="book(flight.id)"></button>
+            <button pButton *ngIf="role=='Admin'" label="See flight details"
+                [routerLink]="['/flights/', flight.id]"></button>
+        </div>
+    </ng-container>
+    <div [hidden]="flights.length > 0 || !departureCity || !destinationCity" class="exception">
+        We are sorry. There are currently no
+        flights
+        from <em>{{departureCity}}</em> to <em>{{destinationCity}}</em> at this date
+    </div>
+</div>

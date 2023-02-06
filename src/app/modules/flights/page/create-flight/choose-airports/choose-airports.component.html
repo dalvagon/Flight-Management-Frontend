@@ -1,0 +1,27 @@
+<div class="choose-airports-content">
+    <label class="title">Airports from {{departureCity?.name}}, {{departureCity?.country?.name}}:</label>
+    <p-listbox [options]="departureAirports" [(ngModel)]="departureAirport">
+        <ng-template let-airport pTemplate="item">
+            <div>{{airport.name}} Airport</div>
+        </ng-template>
+
+        <ng-template pTemplate="empty">
+            <div>No airports found</div>
+        </ng-template>
+    </p-listbox>
+
+    <label class="title">Airports from {{destinationCity?.name}}, {{destinationCity?.country?.name}}:</label>
+    <p-listbox [options]="destinationAirports" [(ngModel)]="destinationAirport">
+        <ng-template let-airport pTemplate="item">
+            <div>{{airport.name}} Airport</div>
+        </ng-template>
+
+        <ng-template pTemplate="empty">
+            <div>No airports found</div>
+        </ng-template>
+    </p-listbox>
+
+    <div>
+        <button type="submit" pButton label="Next" icon="bi bi-chevron-right" (click)="submit()"></button>
+    </div>
+</div>

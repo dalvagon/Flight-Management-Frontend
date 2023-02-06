@@ -1,0 +1,72 @@
+<div class="register-content">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <p>Register</p>
+        <div class="wrapper">
+            <span class="p-input-icon-right">
+                <i class="pi pi-user"></i>
+                <input type="text" formControlName="name" placeholder="Name" pInputText />
+            </span>
+
+            <span class="p-input-icon-right">
+                <i class="pi pi-user"></i>
+                <input type="text" formControlName="surname" placeholder="Surname" pInputText />
+            </span>
+        </div>
+
+        <p-calendar formControlName="dateOfBirth" dateFormat="dd-mm-yy" styleClass="calendar"
+            [hideOnDateTimeSelect]="true" [showIcon]="true" placeholder="Date of birth">
+        </p-calendar>
+
+        <p-dropdown [options]="genders" placeholder="Gender" optionLabel="value" formControlName="gender"></p-dropdown>
+
+        <div class="wrapper">
+            <span class="p-input-icon-right">
+                <i class="pi pi-map-marker"></i>
+                <input type="text" formControlName="number" placeholder="Number" pInputText />
+            </span>
+            <span class="p-input-icon-right">
+                <i class="pi pi-map-marker"></i>
+                <input type="text" formControlName="street" placeholder="Street" pInputText />
+            </span>
+        </div>
+
+        <p-dropdown [options]="countries" formControlName="country" optionLabel="name" placeholder="Country"
+            (onChange)="onCountrySelected($event)">
+            <ng-template let-country pTemplate="selectedItem">
+                <div class="country-item">
+                    <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                    {{country.name}}
+                </div>
+            </ng-template>
+            <ng-template let-country pTemplate="item">
+                <div class="country-item">
+                    <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                    {{country.name}}
+                </div>
+            </ng-template>
+        </p-dropdown>
+
+        <p-dropdown [options]="cities" formControlName="city" optionLabel="name" placeholder="City">
+            <ng-template let-city pTemplate="selectedItem">
+                <div class="city-item">
+                    {{city.name}}
+                </div>
+            </ng-template>
+            <ng-template let-city pTemplate="item">
+                <div class="country-item">
+                    {{city.name}}
+                </div>
+            </ng-template>
+        </p-dropdown>
+
+        <span class="p-input-icon-right">
+            <i class="pi pi-envelope"></i>
+            <input type="text" formControlName="email" placeholder="Email" pInputText />
+        </span>
+
+        <p-password formControlName="password" [toggleMask]="true" [feedback]="true" placeholder="Password">
+        </p-password>
+        <button type="submit" pButton label="Register" class="register-button" [loading]="isLoading"></button>
+        <small>*Or log in <a [routerLink]="['/auth/login']">here</a></small>
+    </form>
+</div>

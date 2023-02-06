@@ -1,0 +1,61 @@
+.flight-details-content {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF3FA;
+}
+
+.flight-details-content .title {
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+.flight-details-content .flight {
+    width: 80%;
+    margin-top: 40px;
+    background-color: #131C2A75;
+    border-radius: 5px;
+}
+
+.flight-details-content .info {
+    padding: 10px;
+    background-color: #9296F075;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.flight-details-content .baggages {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.flight-details-content .baggage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #9296F0;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.flight-details-content .passengers {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.flight-details-content .passenger {
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+    background-color: #FFF3FA;
+    font-size: 20px;
+}

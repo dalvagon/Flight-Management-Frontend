@@ -1,0 +1,80 @@
+.airports-content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    color: #EEE8A9;
+}
+
+.airports-content .airport {
+    width: 80%;
+    margin-top: 40px;
+    background-color: #131C2A75;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.airports-content .title {
+    background-color: #9296F075;
+    color: #131C2A;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.airports-content .delete-icon:hover {
+    cursor: pointer;
+    color: #131C2A;
+}
+
+.airports-content .location {
+    color: #EEE8A9;
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.airports-content .p-button,
+.airports-content .p-button:hover,
+.airports-content .p-button:not(:focus) {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+    outline: none;
+    border: none !important;
+    width: auto;
+    margin: 0;
+    margin-top: 20px;
+    box-shadow: none;
+}
+
+.airports-content .p-button .bi {
+    color: #131C2A;
+
+}
+
+@media only screen and (max-width: 900px) {
+    .airports-content .flight {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .airports-content .cities {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .airports-content .info {
+        width: 100%;
+        padding: 30px;
+    }
+
+}

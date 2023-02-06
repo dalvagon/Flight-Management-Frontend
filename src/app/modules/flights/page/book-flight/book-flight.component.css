@@ -1,0 +1,79 @@
+.book-flight-content {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF3FA;
+}
+
+.book-flight-content form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #131C2A75;
+    border-radius: 5px;
+    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.book-flight-content form label {
+    margin-top: 20px;
+}
+
+.book-flight-content form .p-inputtext,
+.book-flight-content form .p-inputtext:focus {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.book-flight-content form .p-inputnumber .increment-button,
+.book-flight-content form .p-inputnumber .decrement-button {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+    border: none;
+    outline: none;
+    margin: none;
+}
+
+.book-flight-content form p {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.book-flight-content form .p-multiselect,
+.book-flight-content form .p-inputnumber {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.book-flight-content .baggages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-flight-content .baggage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #9296F0;
+    padding: 10px;
+    min-width: 400px;
+    max-width: 400px;
+    margin-top: 5px;
+}
+
+.book-flight-content .submit-button.p-button,
+.book-flight-content .submit-button.p-button:hover,
+.book-flight-content .submit-button.p-button:not(:focus) {
+    background-color: #9296F0 !important;
+    border: none;
+    width: auto;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: none !important;
+}

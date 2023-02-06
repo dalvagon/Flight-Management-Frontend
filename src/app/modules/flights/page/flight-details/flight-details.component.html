@@ -1,0 +1,38 @@
+<div class="flight-details-content">
+    <div class="flight">
+        <div class="info">
+            {{flight?.departureAirport?.address?.city?.name}} -
+            {{flight?.destinationAirport?.address?.city?.name}}
+        </div>
+        <div class="info">
+            {{flight?.departureDate | date: 'dd.MM.yyyy, HH:mm'}} -
+            {{flight?.arrivalDate | date: 'dd.MM.yyyy, HH:mm'}}
+        </div>
+        <div class="info">
+            Seats left: {{seatsLeft$ | async}}
+        </div>
+        <div class="info">Maximum weight per baggage: {{flight?.maxWeightPerBaggage}} kg</div>
+        <div class="info">Maximum baggage weight per person: {{flight?.maxBaggageWeightPerPassenger}} kg</div>
+        <div class="info">Maximum baggage dimensions: {{flight?.maxBaggageWidth}} cm - {{flight?.maxBaggageHeight}} cm
+            - {{flight?.maxBaggageLength}} cm</div>
+        <div class="info">Maximum weight per baggage: {{flight?.maxWeightPerBaggage}} kg</div>
+    </div>
+    <p class="title">Passengers:</p>
+    <div class="passengers">
+        <ng-container *ngFor="let passenger of flight?.passengers">
+            <div class="flight">
+                <div class="info">{{passenger.person.name}} {{passenger.person.surname}}</div>
+                <div class="baggages">
+                    <p>Baggages:</p>
+                    <ng-container *ngFor="let baggage of passenger.baggages">
+                        <div class="baggage">
+                            <div>{{baggage.weight}} kg | {{baggage.width}} cm - {{baggage.height}} cm -
+                                {{baggage.length}} cm
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

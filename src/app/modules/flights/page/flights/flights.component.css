@@ -1,0 +1,38 @@
+.flights-content {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF3FA;
+}
+
+.flights-content .flight {
+    width: 80%;
+    margin-top: 40px;
+    background-color: #131C2A75;
+    border-radius: 5px;
+}
+
+.flights-content .info {
+    padding: 10px;
+    background-color: #9296F075;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.flights-content .exception {
+    margin: auto;
+}
+
+.flights-content .p-button,
+.flights-content .p-button:hover,
+.flights-content .p-button:not(:focus) {
+    background-color: #9296F0 !important;
+    border: none !important;
+    width: auto;
+    margin: 10px !important;
+    box-shadow: none !important;
+}

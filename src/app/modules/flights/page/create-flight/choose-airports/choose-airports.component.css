@@ -1,0 +1,69 @@
+.choose-airports-content {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    height: fit-content;
+    background-color: #131C2A75;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    color: #FFF3FA;
+}
+
+.choose-airports-content .title {
+    background-color: #9296F0;
+    color: #131C2A;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.choose-airports-content .p-button,
+.choose-airports-content .p-button:hover,
+.choose-airports-content .p-button:not(:focus) {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+    outline: none;
+    border: none;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: none !important;
+}
+
+.choose-airports-content .p-button .bi {
+    color: #131C2A;
+}
+
+.choose-airports-content .p-listbox {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 5px;
+    margin-left: 40px;
+}
+
+.choose-airports-content .p-listbox-item {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+    padding: 15px;
+    margin-top: 5px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    outline: none !important;
+    transition: all ease-in-out 200ms !important;
+}
+
+.choose-airports-content .p-listbox-item.p-highlight {
+    background-color: #131C2A !important;
+    color: #EEE8A9 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}

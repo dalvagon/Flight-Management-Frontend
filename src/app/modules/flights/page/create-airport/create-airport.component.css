@@ -1,0 +1,89 @@
+.create-airport-dialog {
+    width: 500px;
+}
+
+.create-airport-dialog input {
+    color: #131C2A;
+}
+
+.create-airport-dialog .p-dialog-header {
+    background-color: #131C2A !important;
+    color: #EEE8A9 !important;
+}
+
+.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close {
+    color: #9296F0 !important;
+}
+
+.create-airport-dialog .p-dialog-header .p-dialog-header-icons .p-dialog-header-close:hover {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+}
+
+.create-airport-dialog .p-dialog-content {
+    background-color: #131C2A !important;
+    color: #EEE8A9 !important;
+}
+
+.create-airport-dialog .p-dialog-content form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.create-airport-dialog .p-dialog-content form>* {
+    margin-bottom: 15px;
+}
+
+.create-airport-dialog .p-dialog-content form input {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+    width: 100%;
+}
+
+.create-airport-dialog .region-dropdown.p-dropdown,
+.create-airport-dialog .region-dropdown.p-dropdown:not(:focus) {
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-label.p-inputtext {
+    text-indent: 4px;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-items-wrapper li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .country-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.create-airport-dialog .region-dropdown.p-dropdown .p-dropdown-items-wrapper li .fi {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.create-airport-dialog .create-airport-button.p-button,
+.create-airport-dialog .create-airport-button.p-button:hover,
+.create-airport-dialog .create-airport-button.p-button:not(:focus) {
+    background-color: #9296F0 !important;
+    color: #131C2A !important;
+    border: 1px solid #131C2A !important;
+    outline: none;
+    width: auto;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: none !important;
+}

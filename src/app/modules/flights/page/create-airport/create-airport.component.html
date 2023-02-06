@@ -1,0 +1,47 @@
+<p-dialog styleClass="create-airport-dialog" header="Create airport" [(visible)]="display" (onHide)="close()"
+    [resizable]="false" [draggable]="false" [modal]="true" [contentStyle]="{'overflow':'visible'}">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <span class="p-input-icon-right">
+            <i class="pi pi-pencil"></i>
+            <input type="text" formControlName="name" placeholder="Name" pInputText>
+        </span>
+        <span class="p-input-icon-right">
+            <i class="pi pi-map-marker"></i>
+            <input type="text" formControlName="number" placeholder="Number" pInputText>
+        </span>
+        <span class="p-input-icon-right">
+            <i class="pi pi-map-marker"></i>
+            <input type="text" formControlName="street" placeholder="Street" pInputText>
+        </span>
+        <p-dropdown styleClass="region-dropdown" [options]="countries" formControlName="country" optionLabel="name"
+            placeholder="Country" (onChange)="onCountrySelected($event)">
+            <ng-template let-country pTemplate="selectedItem">
+                <div class="country-item">
+                    <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                    {{country.name}}
+                </div>
+            </ng-template>
+            <ng-template let-country pTemplate="item">
+                <div class="country-item">
+                    <span class="fi fi-{{country.code.toLowerCase()}} fi"></span>
+                    {{country.name}}
+                </div>
+            </ng-template>
+        </p-dropdown>
+
+        <p-dropdown styleClass="region-dropdown" [options]="cities" formControlName="city" optionLabel="name"
+            placeholder="City">
+            <ng-template let-city pTemplate="selectedItem">
+                <div class="city-item">
+                    {{city.name}}
+                </div>
+            </ng-template>
+            <ng-template let-city pTemplate="item">
+                <div class="country-item">
+                    {{city.name}}
+                </div>
+            </ng-template>
+        </p-dropdown>
+        <button type="submit" pButton label="Create" class="create-airport-button"></button>
+    </form>
+</p-dialog>
